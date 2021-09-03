@@ -33,12 +33,12 @@ public class Main {
 //        int y = 4;
 //        y *= x;
 
-        int x = 10;
-        int y = 2;
-        x/=y;
-        y -= x;
-
-        System.out.println(Integer.MAX_VALUE);
+//        int x = 10;
+//        int y = 2;
+//        x/=y;
+//        y -= x;
+//
+//        System.out.println(Integer.MAX_VALUE);
 
    }
 
