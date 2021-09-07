@@ -1,3 +1,5 @@
+
+import java.util.Scanner;
 public class ControlFlowExercises {
     public static void main(String[] args){
         // EX 1.
@@ -11,11 +13,11 @@ public class ControlFlowExercises {
 //            System.out.println(i);
 //        }
 
-        //EX 2. b pt 1 & 2
+        //EX 1. b pt 1 & 2
 //        int i = 100;
 //        System.out.println("Check on the value of i here! It is " + i);
 //        do{
-//            System.out.println("Now we're in the loop but it still has yet to start. the value is " + i);
+//            System.out.println("Now we're in the loop, but it still has yet to start. the value is " + i);
 //            i = i - 5;
 //            if(i == 0) {
 //                break;
@@ -39,7 +41,7 @@ public class ControlFlowExercises {
 //        }
 
 
-        // Ex 2 pt. 3
+        // Ex 1 pt. 3
 //        long i = 2;
 //        System.out.println("Check on the value of i here! It is " + i);
 //        do{
@@ -48,6 +50,33 @@ public class ControlFlowExercises {
 //        } while (i < 1000000);
 //
 //        System.out.println("Now we're out and the value of i is " + i);
+
+        //EX 2 FizzBuzz
+        //WHILE LOOP
+//        int i = 1;
+//        while(i < 100) {
+//            if(i % 3 == 0 && i % 5 == 0){
+//                System.out.println("FizzBuzz " + i);
+//            }
+//            else if(i % 5 == 0) {
+//                System.out.println("Buzz " + i);
+//            }
+//            else if (i % 3 == 0) {
+//                System.out.println("Fizz " + i);
+//            }
+//        i++;
+//        }
+    Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter an Integer: ");
+        int userInput = scanner.nextInt();
+        System.out.println("number\t | squared\t | cubed\t");
+        System.out.println("______\t | ______\t | ______\t");
+        for(int i = 1; i <= userInput; i++) {
+            System.out.println(i + "      \t|" + i * i + "       \t|" + i * i * i + "         \t");
+
+        }
+        System.out.println("Would you like to continue?");
+
 
     }
 }
