@@ -58,6 +58,8 @@ public class ControlStatementsAndLoops {
         Java is a compiled language.
         Compiling catches mistakes in our code.
         Compilers transform code into an executable class.
+
+
 ////============== CLASSES =============================//
         All Java programs are made of at least one class.
         The class name must match the file: our file is HelloWorld.java and our class is HelloWorld.
@@ -81,8 +83,55 @@ public class ControlStatementsAndLoops {
     This line of code is a statement, because it performs a single task.
     Statements always conclude with a semicolon.
 
+//======== VARIABLES ===============//
+    In Java, we specify the type of information we’re storing.
+    Primitive datatypes are types of data built-in to the Java system.
+    The three main primitive types we’ll cover are int, double, and boolean;
+    this lesson will introduce these built-in types and more.
+    // ints //
+    In Java, whole numbers are stored in the int primitive data type.
+    ints hold positive numbers, negative numbers, and zero.
+    They do not store fractions or numbers with decimals in them.
+    The int data type allows values between -2,147,483,648 and 2,147,483,647, inclusive.
+    // int variable declaration
+    int yearJavaWasCreated;
+    // assignment
+    yearJavaWasCreated = 1996;
+    // declaration and assignment
+    int numberOfPrimitiveTypes = 8;
 
+    // doubles //
+    What if we wanted to store the world’s population?
+    That number would be larger than the int type can hold.
+    double can hold decimals as well as very large and very small numbers.
+    The maximum value is 1.797,693,134,862,315,7 E+308, which is approximately 17 followed by 307 zeros.
+    The minimum value is 4.9 E-324, which is 324 decimal places!
+    // doubles can have decimal places:
+    double price = 8.99;
+    // doubles can have values bigger than what an int could hold:
+    double gdp = 12237700000;
 
+    // booleans //
+    Often our programs face questions that can only be answered with yes or no.
+    We declare boolean variables by using the keyword boolean before the variable name.
+    boolean javaIsACompiledLanguage = true;
+    boolean javaIsACupOfCoffee = false;
+
+    // char //
+    The char data type can hold any character, like a letter, space, or punctuation mark.
+    It must be surrounded by single quotes, '.
+    char grade = 'A';
+    char firstLetter = 'p';
+    char punctuation = '!';
+
+    // String //
+    Our programs will also use Strings, which are objects, instead of primitives.
+    Objects have built-in behavior.
+    There are two ways to create a String object: using a String literal or calling the String class to create a new String object.
+    Like primitive-type variables, we declare a String variable by specifying the type first:
+    String greeting = "Hello World";
+    We could also create a new String object by calling the String class when declaring a String like so:
+    String salutations = new String("Hello World");
 
         * */
 
