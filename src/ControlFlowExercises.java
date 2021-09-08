@@ -69,17 +69,40 @@ public class ControlFlowExercises {
 
         //Ex 3.
     Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter an Integer: ");
-        int userInput = scanner.nextInt();
-        System.out.println("number\t | squared\t | cubed\t");
-        System.out.println("______\t | ______\t | ______\t");
-        for(int i = 1; i <= userInput; i++) {
-            System.out.println(i + "      \t|" + i * i + "       \t|" + i * i * i + "         \t");
+//        System.out.println("Enter an Integer: ");
+//        int userInput = scanner.nextInt();
+//        System.out.println("number\t | squared\t | cubed\t");
+//        System.out.println("______\t | ______\t | ______\t");
+//        for(int i = 1; i <= userInput; i++) {
+//            System.out.println(i + "      \t|" + i * i + "       \t|" + i * i * i + "         \t");
+//
+//        }
+//        System.out.println("Would you like to continue?");
 
-        }
-        System.out.println("Would you like to continue?");
-
-        
+       // Ex 4.
+//        int testScore;
+//
+//        if (testScore >= 90) {
+//
+//            System.out.println("A");
+//
+//        } else if (testScore >= 80) {
+//
+//            System.out.println("B");
+//
+//        } else if (testScore >= 70) {
+//
+//            System.out.println("C");
+//
+//        } else if (testScore >= 60) {
+//
+//            System.out.println("D");
+//
+//        } else {
+//
+//            System.out.println("F");
+//
+//        }
 
 
     }
