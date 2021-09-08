@@ -19,9 +19,9 @@ public class ControlFlowExercises {
 //        do{
 //            System.out.println("Now we're in the loop, but it still has yet to start. the value is " + i);
 //            i = i - 5;
-//            if(i == 0) {
-//                break;
-//            }
+////            if(i == 0) {
+////                break;
+////            }
 //        }while(i > 0);
 //
 //        System.out.println("Now we're out and the value of i is " + i);
@@ -55,7 +55,7 @@ public class ControlFlowExercises {
         //WHILE LOOP
 //        int i = 1;
 //        while(i < 100) {
-//            if(i % 3 == 0 && i % 5 == 0){
+//            if(i % 15 == 0 ){
 //                System.out.println("FizzBuzz " + i);
 //            }
 //            else if(i % 5 == 0) {
@@ -66,6 +66,8 @@ public class ControlFlowExercises {
 //            }
 //        i++;
 //        }
+
+        //Ex 3.
     Scanner scanner = new Scanner(System.in);
         System.out.println("Enter an Integer: ");
         int userInput = scanner.nextInt();
@@ -76,6 +78,8 @@ public class ControlFlowExercises {
 
         }
         System.out.println("Would you like to continue?");
+
+        
 
 
     }
