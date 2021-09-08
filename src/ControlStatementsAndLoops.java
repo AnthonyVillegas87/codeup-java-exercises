@@ -26,13 +26,13 @@ public class ControlStatementsAndLoops {
 //            System.out.println("The variable y is dangerously close to the max value for short type variables, which is " + Short.MAX_VALUE);
 //        }
 
-        String customerChoice = "vanilla";
-        switch (customerChoice) {
-            case "vanilla" -> System.out.println("One vanilla coming right up");
-            case "chocolate" -> System.out.println("chocolate coming right up");
-            case "strawberry" -> System.out.println("strawberry coming right up");
-            default -> System.out.println("We don't have that");
-        }
+//        String customerChoice = "vanilla";
+//        switch (customerChoice) {
+//            case "vanilla" -> System.out.println("One vanilla coming right up");
+//            case "chocolate" -> System.out.println("chocolate coming right up");
+//            case "strawberry" -> System.out.println("strawberry coming right up");
+//            default -> System.out.println("We dont carry that");
+//        }
 
 //        int c = 0, d = 100, e = 50;
 //        if( c == 0 && e++ < 100 )
