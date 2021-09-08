@@ -261,6 +261,60 @@ public class ControlStatementsAndLoops {
     An int value can be converted into a String using the valueOf() method from the String class.
 
 
+ //   Applying DeMorgan’s Laws  //
+    DeMorgan’s laws are a set of rules we can apply to boolean expressions in order to transform the expression without changing its overall value.
+
+    DeMorgan’s first law explains that two expressions that are negated together (using !) and compared with AND (&&) are equivalent to two separately negated expressions compared with OR (||):
+
+    !(exp1 && exp2) == !(exp1) || !(exp2)
+    The second law proves that, on the opposite hand, two expressions that are negated together and compared with OR are equivalent to two individually negated expressions compared with AND:
+
+    !(exp1 || exp2) == !(exp1) && !(exp2)
+    Going back to our above example, let’s break down how we can use DeMorgan’s laws to simplify this expression:
+
+    !(a > b && a == b)
+    Using the information from the first law, we’ll move a > b and a == b into separate parentheses prepended with !. Then, we’ll change && to || which will give us the following expression:
+
+    !(a > b) || !(a == b)
+
+
+ //   Removing Negation with Opposite Operators  //
+    We can eliminate NOT operators (!) from our expressions by changing all operators to their negated, or opposite, value.
+
+    Let’s continue to simplify the expression !(a > b) || !(a == b) by rewriting it so that the expression doesn’t use !.
+    We’ll start with the operand on the right: !(a > b). In order to remove ! without changing the expression’s value, we must change the > operator to its opposite value.
+
+    We can use the following table to find an operator’s negated value:
+
+    Operator	Negated Operator
+    ==	            !=
+    !=	            ==
+    >	            <=
+    <	            >=
+    <=	            >
+    >=	            <
+
+    With this information, we know > will become <=, making our expression !(a > b) become a <= b.
+    Now, we’ll convert the other part of the expression !(a == b) to a != b.
+
+    Putting it all together, our final expression looks like this:
+
+    a <= b || a != b
+    Despite the expressions !(a > b && a == b) and a <= b || a != b looking different, they are equivalent boolean values.
+    No matter what values we give a and b, the two expressions will result in the same value.
+
+    DeMorgan’s Laws can be used to rewrite expressions.
+    The first law states that two expressions that are negated together and compared using && is equivalent to two separately negated expressions compared with ||.
+    The second law states that two expressions that are compared with || and are negated together are equivalent to two separately negated expressions compared with &&.
+    To remove the NOT operator from an expression, we can replace an operator with its opposite operator value.
+    A boolean expression created using these above methods are equivalent to their original expression. They will always produce the same truth value.
+
+    We use operators for reference comparisons (location in memory), and .equals() for content comparison.
+    More precisely, == checks if both objects point to the same memory location while .equals() evaluates the comparison of values in the objects.
+
+
+
+
         * */
 
 

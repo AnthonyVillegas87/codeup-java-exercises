@@ -4,8 +4,8 @@ public class MethodsMiniExercises {
 
         public static String enterInput() {
             Scanner sc = new Scanner(System.in);
-            String stringInput = sc.nextLine();
             System.out.println("Please enter an input.");
+            String stringInput = sc.nextLine();
             return stringInput;
         }
 
