@@ -54,7 +54,7 @@ public class MethodsExercises {
 //      int subNum = subtraction(10, 5);
 //      int multiNum = multiplication(4, 6);
 //      int divideNum = division(10,5);
-       System.out.println(getInteger(10, 4));
+       //System.out.println(getInteger(10, 4));
 
 
     }

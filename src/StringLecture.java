@@ -71,6 +71,14 @@ public class StringLecture {
    These keywords are defining what parts of your code have access to other parts of your code.
    The way we declare something to be public is to use the public keyword in the declaration statement.
 
+   ====== The private Keyword and Encapsulation ===========
+   sometimes restricting our code is actually useful from a design perspective. This is one of the core ideas behind encapsulation.
+   By making our instance variables (and some methods) private, we encapsulate our code into nice little bundles of logic.
+
+   For example, a Bank object doesn’t necessarily need to know the inner workings of a CheckingAccount object. It doesn’t need to know that the money is stored in a field named money, or that interest is added to an account by using a method named .addInterest().
+   In fact, if it had access to those fields or methods, it’s possible that someone using a Bank object could change things in a CheckingAccount without realizing it.
+   By limiting access by using the private keyword, we are able to segment, or encapsulate, our code into individual units.
+
      */
 
 
