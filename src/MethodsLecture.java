@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class MethodsLecture {
 
 
@@ -162,25 +164,43 @@ public class MethodsLecture {
         }
 
         // TODO: use recursion to print out a given number up through 100
-        // public static int countTo100(int num) {
-        // }
+         public static void countTo100(int num) {
+             if(num == 101) return;
+             System.out.println(num);
+            ++num;
+            countTo100(num);
+
+         }
 
 
         // TODO: use recursion to add all numbers up from 1 to a given number
-        // public static int addNums(int num) {
-        // }
+         public static int addNums(int num) {
+            if(num == 1) return 1;
+            return  addNums(num - 1) + num;
+         }
 
         // TODO: use recursion to ensure only the string "hello" is returned from the function
-        // public static String getHello() {
-        // }
+         public static String getHello() {
+            Scanner sc = new Scanner(System.in);
+             System.out.println("Please enter the word hello");
+            String userInput = sc.nextLine();
+            if(userInput.equalsIgnoreCase("hello")) {
+                return userInput;
+            } else {
+               return getHello();
+            }
+         }
 
-        // public static void main(String[] args) {
-        //     System.out.println(powersOfTen(1));
-        //     System.out.println(powersOfTen(3));
-        //
-        //     countTo100Loop(4);
-        //
-        // }
+         public static void main(String[] args) {
+//            String hi = getHello();
+//             System.out.println("You say howdy " + hi + " i say yo!");
+//             countTo100(50);
+//             System.out.println( addNums(5));
+//             System.out.println(powersOfTen(1));
+//             System.out.println(powersOfTen(3));
+//             countTo100Loop(4);
+
+         }
 
 
 
