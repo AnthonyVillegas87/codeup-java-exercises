@@ -53,10 +53,23 @@ public class StringLecture {
     toUpperCase(): returns the string value converted to uppercase
     toLowerCase(): returns the string value converted to lowercase
 
+// ========== Access & Scope ==============///
+    As our Java programs begin to get bigger and we begin to have multiple Objects and Classes that interact with each other,
+     the concepts of access and scope come into play.
 
+        Access
+    The public and private keywords and how they relate to Classes, variables, constructors, and methods
+    The concept of encapsulation
+    Accessor methods, sometimes known as “getters”
+    Mutator methods, sometimes known as “setters”
 
+    Scope
+    Local variables vs. instance variables
+    The this keyword
 
-
+   ====== The public Keyword =====
+   These keywords are defining what parts of your code have access to other parts of your code.
+   The way we declare something to be public is to use the public keyword in the declaration statement.
 
      */
 

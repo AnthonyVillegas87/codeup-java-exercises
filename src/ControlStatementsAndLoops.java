@@ -273,7 +273,8 @@ public class ControlStatementsAndLoops {
     Going back to our above example, let’s break down how we can use DeMorgan’s laws to simplify this expression:
 
     !(a > b && a == b)
-    Using the information from the first law, we’ll move a > b and a == b into separate parentheses prepended with !. Then, we’ll change && to || which will give us the following expression:
+    Using the information from the first law, we’ll move a > b and a == b into separate parentheses prepended with !.
+    Then, we’ll change && to || which will give us the following expression:
 
     !(a > b) || !(a == b)
 
