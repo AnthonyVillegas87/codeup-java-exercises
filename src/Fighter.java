@@ -16,4 +16,16 @@ public class Fighter {
         return D20.roll20();
     }
 
+    public Fighter() {
+
+    }
+
+    public Fighter(String name, int hitPoints, int maxDamage) {
+        System.out.println("A new fighter has emerged.");
+        this.name = name;
+        this.hitPoints = hitPoints;
+        this.maxDamage = maxDamage;
+        this.printStats();
+    }
+
 }
