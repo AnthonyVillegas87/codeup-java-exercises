@@ -5,7 +5,7 @@ public class Quote {
          case 1 -> {
              System.out.println("Water can flow...");
          }
-         case 2 -> {
+         case 2 ->{
              System.out.println("or it can crash...");
          }
          case 3 -> {
