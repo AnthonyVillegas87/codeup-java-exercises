@@ -12,8 +12,16 @@ public class MethodWarmup {
 
 
 
+
+
     public static void main(String[] args) {
-        System.out.println(getDifference(0, 10));
+       String str = "8" + 1;
+       System.out.println(str);
     }
+
+
+
+
+
 
 }

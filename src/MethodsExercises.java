@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.lang.Math;
 public class MethodsExercises {
 
 
@@ -60,7 +60,24 @@ public class MethodsExercises {
     }
 
     //4.
-
+//    public static int diceRoll() {
+//        int max = 6;
+//        int min = 1;
+//        int range = max - min + 1;
+//        boolean confirm = true;
+//        do {
+//            Scanner sc = new Scanner(System.in);
+//            System.out.println("Roll the dice: ");
+//            int input = sc.nextInt();
+//
+//            System.out.println("Would you like to continue? (yes or no)");
+//            String yesOrNo = sc.next().toLowerCase();
+//            if(!yesOrNo.equals("yes")) {
+//                confirm = false;
+//            }
+//        } while(confirm);
+//        return input;
+//    }
 
 
 
@@ -71,7 +88,7 @@ public class MethodsExercises {
 //        if(x < 2) return 1;
 //        return fibSequence(x - 1) + fibSequence(x - 2);
 //    }
-//
+
 
 
 
