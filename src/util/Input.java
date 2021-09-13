@@ -13,13 +13,13 @@ public class Input {
        this.scanner = new Scanner(System.in);
    }
 
-   boolean yesNo(){
+  public boolean yesNo(){
        System.out.println("Enter yes or y: ");
        String userInput = scanner.nextLine().toLowerCase();
        return (userInput.equals("yes") || userInput.equals("y"));
    }
 
-   int getInt(int min, int max) {
+   public int getInt(int min, int max) {
        System.out.println("Enter a number between " + min + " and " + max);
        int input = scanner.nextInt();
        if(input < min || input > max) {
@@ -28,11 +28,11 @@ public class Input {
        return input;
    }
 
-   int getInt() {
+   public int getInt() {
      return getInt(1, 10);
    }
 
-   double getDouble(double min, double max) {
+   public double getDouble(double min, double max) {
        System.out.println("Enter a number between " + min + " and " + max);
        double dblInput = scanner.nextInt();
        if(dblInput < min || dblInput > max) {
@@ -41,7 +41,7 @@ public class Input {
        return dblInput;
    }
 
-   double getDouble() {
+  public double getDouble() {
        return getDouble(1, 10);
    }
 
