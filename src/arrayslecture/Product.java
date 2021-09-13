@@ -30,10 +30,6 @@ public class Product {
 
 
 
-    // array
-
-
-
     //  static method to calculate the average
      public static double getAveragePrice(Product[] products) {
          double total = 0;
@@ -48,12 +44,13 @@ public class Product {
 
 
     public static void main(String[] args) {
+        // array
         Product[] products = {
                 new Product("Gum", .99),
                 new Product("Toothpaste", 2.99),
                 new Product("Shampoo", 3.99)
         };
-   double x = Product.getAveragePrice(products);
+        double x = Product.getAveragePrice(products);
         System.out.println(x);
     }
 
