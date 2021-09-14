@@ -15,5 +15,11 @@ public class BirdTest {
         System.out.println(mallard.getName() + " says: ");
         mallard.makeNoise();
         mallard.move();
+
+
+        Eagle baldeagle = new Eagle();
+        baldeagle.setName("Bald Eagle");
+        System.out.println(baldeagle.getName() + "says: ");
+        baldeagle.makeNoise();
     }
 }
