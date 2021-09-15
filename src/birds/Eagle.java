@@ -6,4 +6,8 @@ public class Eagle extends Bird {
         super.makeNoise();
         System.out.println("Whistle Whistle");
     }
+
+    Eagle() {
+        super("Bald Eagle");
+    }
 }
