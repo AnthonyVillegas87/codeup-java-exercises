@@ -3,14 +3,14 @@ package vehicle;
 public class VehicleTest {
 
     public static void main(String[] args) {
-        Car hyundai = new Car();
-        hyundai.setName("Palisade");
+        Car hyundai = new Car("Palisade");
+ //      hyundai.setName();
         System.out.println("My " + hyundai.getName() + " goes: ");
         hyundai.makeNoise();
 
 
-        Truck ford = new Truck();
-        ford.setName("Bronco");
+        Truck ford = new Truck("Bronco");
+ //       ford.setName();
         System.out.println("My " + ford.getName() + " goes: ");
         ford.makeNoise();
     }

@@ -8,4 +8,9 @@ public class Truck extends Vehicle{
         super.makeNoise();
         System.out.println("Ka-plunk");
     }
+
+    Truck(String name) {
+        super(name);
+    }
+
 }

@@ -2,12 +2,12 @@ package vehicle;
 
 public class GarageTest {
     public static void main(String[] args) {
-        Car camry = new Car();
-        camry.setName("Camry");
+        Car camry = new Car("Camry");
+  //      camry.setName();
 
 
-        Truck chevrolet = new Truck();
-        chevrolet.setName("Chevrolet");
+        Truck chevrolet = new Truck("Chevrolet");
+  //      chevrolet.setName();
 
         Vehicle[] carsInGarage = new Vehicle[2];
         carsInGarage[0] = camry;
