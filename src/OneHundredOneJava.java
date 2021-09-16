@@ -20,14 +20,25 @@ public class OneHundredOneJava {
 //4. Create a method numericStringToDouble that takes in a numeric string and
 //    returns the number value as a double.
 
+    public double numericStringToDouble(String num) {
+            return Integer.parseInt(num);
+    }
 
-
-//            5. Create a method, doubleToFloat, that takes in a double and returns the number as a float. Assume that the input values will fit within a double data type.
-//
+//     5. Create a method, doubleToFloat, that takes in a double and returns the number as a float.
+//      Assume that the input values will fit within a double data type.
+    public float doubleToFloat(double num) {
+            return (float) num;
+    }
 //6. Create a method, firstChar, that takes in a string and returns the first character of the string.
-//
+    public String firstChar(String str) {
+            return String.valueOf(str.charAt(0));
+    }
 //7. Create a method, lastChar, that takes in a string and returns the last character of the string.
-//
+
+    public String lastChar(String myStr) {
+            return String.valueOf(myStr.charAt(myStr.length() - 1));
+    }
+
 //8. Create a method, capFirst, that takes in a string and returns the string with the first letter capitalized and all other letters in lowercase.
 //
 //            9. Create a method, sameFirstAndLast, that takes in a string and returns true if the first and last character match (not case sensitive).
