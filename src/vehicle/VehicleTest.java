@@ -13,5 +13,9 @@ public class VehicleTest {
  //       ford.setName();
         System.out.println("My " + ford.getName() + " goes: ");
         ford.makeNoise();
+
+        Tractor johnDeere = new Tractor("John Deere");
+        System.out.println("My " + johnDeere.getName() + " goes: ");
+        johnDeere.makeNoise();
     }
 }
