@@ -1,14 +1,27 @@
 public class OneHundredOneJava {
 
 //    1. Create a method, returnHelloWorld, that returns the string "Hello World"
-//
+        public String returnHelloWorld() {
+            return "Hello World";
+        }
+
 //            2. Create a method, addInts, that takes in two integers and returns their sum
-//
+
+        public int addInts(int x, int y) {
+            return x + y;
+        }
+
 //3. Create a method, intToLong, that takes in an integer and returns the same number as a long data type
-//
+
+        public long intToLong(int z) {
+            return z;
+        }
+
 //4. Create a method numericStringToDouble that takes in a numeric string and
 //    returns the number value as a double.
-//
+
+
+
 //            5. Create a method, doubleToFloat, that takes in a double and returns the number as a float. Assume that the input values will fit within a double data type.
 //
 //6. Create a method, firstChar, that takes in a string and returns the first character of the string.
