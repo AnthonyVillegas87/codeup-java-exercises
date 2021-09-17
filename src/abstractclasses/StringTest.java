@@ -12,8 +12,8 @@ public class StringTest {
         string[0] = hello.getStr();
         string[1] = world.getStr();
 
-       for(String s : string) {
-            string.append(s.charAt(i));
-       }
+//       for(String s : string) {
+//          //  string.append(s.charAt(i));
+//       }
     }
 }
