@@ -4,8 +4,20 @@ public class ExceptionsLectureTest {
 
     public static void main(String[] args) {
 
-        ExceptionsLecture el = new ExceptionsLecture();
-        el.askForInt();
+
+
+        try {
+            ExceptionsLecture el = new ExceptionsLecture();
+            el.subListMaker("sentence");
+        } catch(IndexOutOfBoundsException nfx) {
+            System.out.println("Got an exception " + nfx);
+        } catch(NullPointerException npe) {
+            System.out.println("This is " + npe);
+        } catch (IllegalArgumentException iae) {
+            System.out.println("This is: " + iae);
+        }
+
+//        el.askForInt();
 //        try {
 //
 //            System.out.println(Integer.parseInt(el.noInt));

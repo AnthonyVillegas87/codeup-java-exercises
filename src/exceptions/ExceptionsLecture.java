@@ -1,6 +1,7 @@
 package exceptions;
+import java.util.List;
 import java.util.Scanner;
-
+import java.util.ArrayList;
 
 public class ExceptionsLecture {
 
@@ -41,5 +42,25 @@ public class ExceptionsLecture {
             System.out.println("That was useful wasn't it?");
         }
     }
+
+    public void subListMaker(String sentence){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter an integer");
+        int firstInt = scanner.nextInt();
+        System.out.println("Please enter another integer");
+        int secondInt = scanner.nextInt();
+        System.out.println(sentence);
+        ArrayList<String> wordArrayList = new ArrayList<String>();
+        String[] stringArray = sentence.split(" ");
+        for (String word : stringArray){
+            wordArrayList.add(word);
+        }
+        List<String> shorterList =  wordArrayList.subList(firstInt, secondInt);
+        String newSentence = String.join(" ", shorterList);
+        System.out.println(newSentence);
+    }
+
+
+
 
 }
