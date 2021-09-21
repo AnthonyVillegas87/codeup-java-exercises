@@ -4,18 +4,23 @@ public class ExceptionsLectureTest {
 
     public static void main(String[] args) {
 
+        ExceptionsLecture el = new ExceptionsLecture();
 
-
-        try {
-            ExceptionsLecture el = new ExceptionsLecture();
-            el.subListMaker("sentence");
-        } catch(IndexOutOfBoundsException nfx) {
-            System.out.println("Got an exception " + nfx);
-        } catch(NullPointerException npe) {
-            System.out.println("This is " + npe);
-        } catch (IllegalArgumentException iae) {
-            System.out.println("This is: " + iae);
-        }
+//        try {
+//            ExceptionsLecture el = new ExceptionsLecture();
+//            el.subListMaker("sentence");
+//        } catch(IndexOutOfBoundsException nfx) {
+//            System.out.println("Got an exception " + nfx);
+//        } catch(NullPointerException npe) {
+//            System.out.println("This is " + npe);
+//        } catch (IllegalArgumentException iae) {
+//            System.out.println("This is: " + iae);
+//        }
+//        try {
+//            el.echoWord();
+//        } catch (IllegalArgumentException iax) {
+//            System.out.println("How Rude!!");
+//        }
 
 //        el.askForInt();
 //        try {
@@ -35,6 +40,12 @@ public class ExceptionsLectureTest {
 //            System.out.println("Got an exception " + nfx);
 //            System.out.println(nfx.getMessage());
 //        }
+
+        try {
+            el.echoWord();
+        } catch (CusswordException cx) {
+            System.out.println("Oh no " + cx);
+        }
 
     }
 }
