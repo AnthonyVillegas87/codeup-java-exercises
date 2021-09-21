@@ -21,7 +21,8 @@ public class Input {
 
    public int getInt(int min, int max) {
        System.out.println("Enter a number between " + min + " and " + max);
-       int input = scanner.nextInt();
+    //   int input = scanner.nextInt();
+      int input = Integer.valueOf(getString());
        if(input < min || input > max) {
            getInt();
        }
@@ -34,7 +35,8 @@ public class Input {
 
    public double getDouble(double min, double max) {
        System.out.println("Enter a number between " + min + " and " + max);
-       double dblInput = scanner.nextInt();
+    //   double dblInput = scanner.nextInt();
+       double dblInput = Double.valueOf(getString());
        if(dblInput < min || dblInput > max) {
            getDouble();
        }
