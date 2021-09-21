@@ -1,50 +1,62 @@
+package onehundred;
+
 public class OneHundredOneJava {
 
-//    1. Create a method, returnHelloWorld, that returns the string "Hello World"
-        public String returnHelloWorld() {
-            return "Hello World";
-        }
+    //    1. Create a method, returnHelloWorld, that returns the string "Hello World"
+    public static String returnHelloWorld() {
+        return "Hello World";
+    }
 
 //            2. Create a method, addInts, that takes in two integers and returns their sum
 
-        public int addInts(int x, int y) {
-            return x + y;
-        }
+    public static int addInts(int x, int y) {
+        return x + y;
+    }
 
 //3. Create a method, intToLong, that takes in an integer and returns the same number as a long data type
 
-        public long intToLong(int z) {
-            return z;
-        }
+    public static int intToLong(long i) {
+        long l2 = i;
+        return (int) l2;
+    }
 
 //4. Create a method numericStringToDouble that takes in a numeric string and
 //    returns the number value as a double.
 
-    public double numericStringToDouble(String num) {
-            return Integer.parseInt(num);
+    public static double numericStringToDouble(String num) {
+        return Integer.parseInt(num);
     }
 
-//     5. Create a method, doubleToFloat, that takes in a double and returns the number as a float.
-//      Assume that the input values will fit within a double data type.
-    public float doubleToFloat(double num) {
-            return (float) num;
+    //     5. Create a method, doubleToFloat, that takes in a double and returns the number as a float.
+//      Assume that the input values will fit within a double data type. **
+    public static float doubleToFloat(double num) {
+        return (float) num;
     }
-//6. Create a method, firstChar, that takes in a string and returns the first character of the string.
-    public String firstChar(String str) {
-            return String.valueOf(str.charAt(0));
+    //6. Create a method, firstChar, that takes in a string and returns the first character of the string.
+    public static String firstChar(String str) {
+        return String.valueOf(str.charAt(0));
     }
 //7. Create a method, lastChar, that takes in a string and returns the last character of the string.
 
-    public String lastChar(String myStr) {
-            return String.valueOf(myStr.charAt(myStr.length() - 1));
+    public static String lastChar(String myStr) {
+        return String.valueOf(myStr.charAt(myStr.length() - 1));
     }
 
 //8. Create a method, capFirst, that takes in a string and returns the string with the first letter capitalized and all other letters in lowercase.
-//
+    public static String capFirst(String let) {
+        String str = let.substring(0, 1).toUpperCase() + let.substring(1);
+        return str;
+    }
+
+
 //            9. Create a method, sameFirstAndLast, that takes in a string and returns true if the first and last character match (not case sensitive).
-//
+
+    public static boolean sameFirstAndLast(String str) {
+        int length = str.length();
+        return str.charAt(0) == str.charAt(length - 1);
+    }
 //            10. Create a method, sameCase, that takes in two strings. Assume both strings are the same length and only contain letters. The method should return true if both strings share the same sequence letter case.
-//
+
 //            11. Create a method, combineChars, that takes in two char inputs and returns a string combining them in numeric/alphabetical order. If a combination of a letter and number, the number will come first.
 //
 //            12. Create a method, containsSumOfFour, that takes in a string containing any sequence of letters and numbers. If all numbers in the string add up to four, return true, otherwise, return false.
@@ -262,6 +274,11 @@ public class OneHundredOneJava {
 //
 //80. Create a class, CustomerMetrics, and add a static method, getAverageCustomer value, that takes in an arraylist of customers of various types and returns the average of all customerValues.
 //
+public static void main(String[] args) {
+     System.out.println(sameFirstAndLast("ava"));
+}
+
+
 
 
 }

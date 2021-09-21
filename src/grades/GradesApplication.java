@@ -1,5 +1,6 @@
 package grades;
 import java.util.HashMap;
+import java.util.Scanner;
 public class GradesApplication {
 
 
@@ -14,5 +15,11 @@ public class GradesApplication {
         username.put("Noah", 75);
         username.put("Salvador", 80);
         System.out.println(username);
+
+        Scanner sc = new Scanner(System.in);
+
+
+
+
     }
 }
