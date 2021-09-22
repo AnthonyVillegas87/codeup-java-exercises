@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class ArraysExercise {
+public class ArraysExercises {
 
 
     public static Person[] addPerson(Person[] people, Person newPeople) {
