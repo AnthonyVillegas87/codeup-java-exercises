@@ -23,7 +23,7 @@ public class Input {
    public int getInt(int min, int max)  throws NumberFormatException{
        System.out.println("Enter a number between " + min + " and " + max);
     //   int input = scanner.nextInt();
-      int input = Integer.valueOf(getString());
+      int input;
       try {
           input = Integer.valueOf(getString());
       } catch (NumberFormatException nfx) {
