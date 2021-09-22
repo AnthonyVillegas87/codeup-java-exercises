@@ -52,21 +52,29 @@ public class Movie {
            user = Integer.parseInt(sc.next());
 
 
-
+           label:
            for(Movie movies : MoviesArray.findAll()) {
-               if (user == 0) break;
-               else if (user == 1) {
-                   System.out.println(movies.getName() + "__" + movies.getCategory());
-               } else if (user == 2) {
-                   System.out.println(movies.getName() + "__" + movies.getCategory());
-               } else if (user == 3) {
-                   System.out.println(movies.getName() + "__" + movies.getCategory());
-               } else if (user == 4) {
-                   System.out.println(movies.getName() + "__" + movies.getCategory());
-               } else if (user == 5) {
-                   System.out.println(movies.getName() + "__" + movies.getCategory());
-               } else if (user == 6){
-                   System.out.println(movies.getName() + "__" + movies.getCategory());
+               switch (user) {
+                   case 0:
+                       break label;
+                   case 1:
+                       System.out.println(movies.getName() + "__" + movies.getCategory());
+                       break;
+                   case 2:
+                       System.out.println(movies.getName() + "__" + movies.getCategory());
+                       break;
+                   case 3:
+                       System.out.println(movies.getName() + "__" + movies.getCategory());
+                       break;
+                   case 4:
+                       System.out.println(movies.getName() + "__" + movies.getCategory());
+                       break;
+                   case 5:
+                       System.out.println(movies.getName() + "__" + movies.getCategory());
+                       break;
+                   case 6:
+                       System.out.println(movies.getName() + "__" + movies.getCategory());
+                       break;
                }
            }
 
