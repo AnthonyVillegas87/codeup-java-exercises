@@ -1,3 +1,5 @@
+package fighter;
+
 public class FighterTest {
 
     public static void main(String[] args) {

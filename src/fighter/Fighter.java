@@ -1,3 +1,5 @@
+package fighter;
+
 public class Fighter {
 
     public String name;

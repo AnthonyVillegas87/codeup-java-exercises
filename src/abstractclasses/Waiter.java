@@ -30,8 +30,8 @@ public class Waiter extends Employee implements Transferable{
 //        waiter.sayHi();
         Transferable waiter = new Waiter();
         waiter.transferToNewLocation("San Antonio");
-//        Employee developer = new Developer();
-//        Employee[] employees = {waiter, developer};
+//        employee.Employee developer = new Developer();
+//        employee.Employee[] employees = {waiter, developer};
 //        employeesWork(employees);
     }
 }

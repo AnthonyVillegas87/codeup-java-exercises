@@ -1,3 +1,7 @@
+package dog;
+
+import dog.Dog;
+
 public class DogTest {
 
 
@@ -5,7 +9,7 @@ public class DogTest {
         Dog hugo =  new Dog("Hugo", "Woof!", 4, true);
 //        hugo.name = "Hugo";
 //        hugo.sound = "Woof!";
-//        Dog.bark();
+//        dog.Dog.bark();
         System.out.println(hugo);
     }
 

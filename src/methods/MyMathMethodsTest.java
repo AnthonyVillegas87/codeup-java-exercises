@@ -1,3 +1,7 @@
+package methods;
+
+import methods.MyMathMethods;
+
 public class MyMathMethodsTest {
 
     public static void main(String [] args) {

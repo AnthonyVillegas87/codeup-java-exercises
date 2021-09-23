@@ -1,3 +1,7 @@
+package person;
+
+import person.Person;
+
 public class PersonTest {
 
 
@@ -10,17 +14,17 @@ public class PersonTest {
         person.sayHello();
         System.out.println(person.getName());
 
-//        Person person1 = new Person("John");
-//        Person person2 = new Person("John");
+//        person.Person person1 = new person.Person("John");
+//        person.Person person2 = new person.Person("John");
 //        System.out.println(person1.getName().equals(person2.getName()));
 //        System.out.println(person1 == person2);
 
-//        Person person1 = new Person("John");
-//        Person person2 = person1;
+//        person.Person person1 = new person.Person("John");
+//        person.Person person2 = person1;
 //        System.out.println(person1 == person2);
 
-//        Person person1 = new Person("John");
-//        Person person2 = person1;
+//        person.Person person1 = new person.Person("John");
+//        person.Person person2 = person1;
 //        System.out.println(person1.getName());
 //        System.out.println(person2.getName());
 //        person2.setName("Jane");
