@@ -1,7 +1,8 @@
 package movies;
 
+import java.util.Objects;
 import java.util.Scanner;
-public class Movie {
+public class Movie implements Entertains{
     private String name;
     private String category;
 
@@ -32,6 +33,8 @@ public class Movie {
         this.category = category;
     }
 
+
+
     public void movieSearch () {
        Scanner sc = new Scanner(System.in);
         String userInput;
@@ -58,10 +61,10 @@ public class Movie {
                    case 0:
                        break label;
                    case 1:
-                       System.out.println(movies.getName() + "__" + movies.getCategory());
+                       System.out.println(movies.getName() + "__" + movies.getCategory() );
                        break;
                    case 2:
-                       System.out.println(movies.getName() + "__" + movies.getCategory());
+                       System.out.println(movies.getName() + "__" + movies.getCategory() );
                        break;
                    case 3:
                        System.out.println(movies.getName() + "__" + movies.getCategory());
@@ -83,5 +86,16 @@ public class Movie {
 
 
        }while(userInput.equals("y") || userInput.equals("yes"));
+    }
+
+    @Override
+    public String audienceReaction() {
+        String myMovie = "";
+        for(Movie movies : MoviesArray.findAll()) {
+            if(Objects.equals(movies.getCategory(), "animated")) {
+             myMovie = "That is a great genre for the children!";
+            }
+        }
+        return myMovie;
     }
 }

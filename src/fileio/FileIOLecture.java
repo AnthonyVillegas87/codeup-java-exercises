@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 public class FileIOLecture {
     public static void main(String[] args) {
@@ -36,7 +37,7 @@ public class FileIOLecture {
 //        } catch (IOException ioe) {
 //            ioe.printStackTrace();
 //        }
-
+     //   FileIOLecture fiol = new FileIOLecture();
 
         List<String> lateImperials = new ArrayList<>();
         lateImperials.add("Gall Placidia");
@@ -48,6 +49,24 @@ public class FileIOLecture {
         } catch (IOException iox){
             iox.printStackTrace();
         }
+
+        List<String> currentList = new ArrayList<>();
+        try {
+            currentList = Files.readAllLines(ourTxtFile);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+
+        }
+
+        currentList.removeIf(item -> item.equalsIgnoreCase("Claudius"));
+
+        try {
+            Files.write(ourTxtFile, currentList);
+        } catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+
+        //fiol.readFileAndOutput(ourTxtFile);
 
 
 
