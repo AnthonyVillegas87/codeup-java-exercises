@@ -60,13 +60,27 @@ public class FileIOLecture {
 
         currentList.removeIf(item -> item.equalsIgnoreCase("Claudius"));
 
+        Path pathToFile = Paths.get("src/data", "list.txt");
         try {
             Files.write(ourTxtFile, currentList);
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
+        FileIOLecture fiol = new FileIOLecture();
+        fiol.readFileAndOutput(pathToFile);
+    }
 
-        //fiol.readFileAndOutput(ourTxtFile);
+        public void readFileAndOutput (Path pathToFile) {
+            List<String> linesInTheFile = new ArrayList<>();
+            try {
+                linesInTheFile = Files.readAllLines(pathToFile);
+            } catch (IOException ioe){
+                ioe.printStackTrace();
+            }
+            for (String line : linesInTheFile){
+                System.out.println(line);
+            }
+        }
 
 
 
