@@ -55,11 +55,34 @@ public class OneHundredOneJava {
         int length = str.length();
         return str.charAt(0) == str.charAt(length - 1);
     }
-//            10. Create a method, sameCase, that takes in two strings. Assume both strings are the same length and only contain letters. The method should return true if both strings share the same sequence letter case.
+//            10. Create a method, sameCase, that takes in two strings. Assume both strings are the same length and only contain letters.
+//            The method should return true if both strings share the same sequence letter case.
+    public static boolean sameCase(String strOne, String strTwo) {
+        for(int i = 0; i < strOne.length(); i++) {
+            String newStr = String.valueOf(strOne.charAt(i));
+            String newStrTwo = String.valueOf(strTwo.charAt(i));
+            boolean strAllLower = newStr.equals(newStr.toLowerCase());
+            boolean strAllLowerToo = newStrTwo.equals(newStrTwo.toLowerCase());
+            boolean strAllUpper = newStr.equals(newStr.toUpperCase());
+            boolean strAllUpperToo = newStrTwo.equals(newStrTwo.toUpperCase());
+            if(!strAllUpper == strAllUpperToo) return false;
+            if(!strAllLower == strAllLowerToo) return false;
 
-//            11. Create a method, combineChars, that takes in two char inputs and returns a string combining them in numeric/alphabetical order. If a combination of a letter and number, the number will come first.
-//
-//            12. Create a method, containsSumOfFour, that takes in a string containing any sequence of letters and numbers. If all numbers in the string add up to four, return true, otherwise, return false.
+        }
+        return true;
+    }
+
+//            11. Create a method, combineChars, that takes in two char inputs and returns a string combining them in numeric/alphabetical order.
+//            If a combination of a letter and number, the number will come first.
+            public static String combineChars(char a, char b ){
+                    int charOne = Character.compare(a, b);
+                    return charOne > 0 ? b + "" + a:  a + "" + b;
+            }
+
+
+
+//            12. Create a method, containsSumOfFour, that takes in a string containing any sequence of letters and numbers.
+//            If all numbers in the string add up to four, return true, otherwise, return false.
 //
 //            13. Create a method, isPrime, that takes in a positive integer and returns if the integer is a prime number.
 //
@@ -275,7 +298,18 @@ public class OneHundredOneJava {
 //80. Create a class, CustomerMetrics, and add a static method, getAverageCustomer value, that takes in an arraylist of customers of various types and returns the average of all customerValues.
 //
 public static void main(String[] args) {
-     System.out.println(sameFirstAndLast("ava"));
+
+    System.out.println(combineChars('a', 'b'));
+    System.out.println(combineChars('1', 'A'));
+    System.out.println(combineChars('A', '1'));
+    System.out.println(combineChars('B', 'X'));
+
+//    System.out.println(sameCase("Hello", "Today")); // true
+//    System.out.println(sameCase("Hello", "today")); // false
+//    System.out.println(sameCase("dog", "cat")); // true
+//    System.out.println(sameCase("HAT", "TOY")); // true
+       // System.out.println(sameFirstAndLast("ava"));
+    //System.out.println(sameCase("hello", "hello"));
 }
 
 
