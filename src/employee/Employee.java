@@ -1,7 +1,17 @@
 package employee;
 
 public class Employee {
-    public String name;
+    private String name;
+
+    public Employee(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+
     public static String company = "Veridian Dynamics";
 
     public void displayEmployeeInfo(){

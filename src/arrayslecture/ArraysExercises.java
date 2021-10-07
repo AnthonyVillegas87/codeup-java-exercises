@@ -2,6 +2,9 @@ package arrayslecture;
 
 import java.util.Arrays;
 
+
+import java.util.ArrayList;
+import java.util.List;
 public class ArraysExercises {
 
 
@@ -14,10 +17,25 @@ public class ArraysExercises {
 
 
     public static void main(String[] args) {
-//        person.Person[] people = {
-//                new person.Person("OJ"),
-//                new person.Person("Chris"),
-//                new person.Person("Noah")
+
+//        List<Integer> numbers = new ArrayList<>();
+//        numbers.add(13);
+//        numbers.add(new Integer(8)); // Line 7
+//        numbers.add(3.6); // Line 8
+//        for (Integer number: numbers) System.out.println(number); // Line 9
+
+
+        String[] names = {"James Gosling", "Mike Sheridan", "Patrick Naughton"};
+        for (String name : names)
+            System.out.println(name);
+
+
+
+
+//        Person[] people = {
+//                new Person("OJ"),
+//                new Person("Chris"),
+//                new Person("Noah")
 //        };
 //
 //        for(int i = 0; i < people.length; i++) {

@@ -1,6 +1,9 @@
 package arrayslecture;
 
 import java.util.Arrays;
+
+
+
 public class ArraysLecture {
 
     public static void printNums(int[] nums) {
@@ -82,11 +85,11 @@ public class ArraysLecture {
 
         // arrays may contain a list of custom reference types
         //
-        // person.Person p1 = new person.Person("Fred", 99);
-        // person.Person p2 = new person.Person("Sally", 45);
-        // person.Person p3 = new person.Person("Billy", 30);
+        // Person p1 = new Person("Fred", 99);
+        // Person p2 = new Person("Sally", 45);
+        // Person p3 = new Person("Billy", 30);
         //
-        // person.Person[] people = new person.Person[4];
+        // Person[] people = new Person[4];
         //
         // people[0] = p1;
         // people[1] = p2;
@@ -98,14 +101,14 @@ public class ArraysLecture {
 
         // using an array initializer...
 
-        // person.Person[] people = {
-        //     new person.Person("Fred", 99),
-        //     new person.Person("Sally", 45),
-        //     new person.Person("Billy", 30)
+        // Person[] people = {
+        //     new Person("Fred", 99),
+        //     new Person("Sally", 45),
+        //     new Person("Billy", 30)
         // };
 
         // using a method that take in an array as an argument
-        // person.Person.printOutAgesOfPeople(people);
+        // Person.printOutAgesOfPeople(people);
 
 
          /* TODO: create a class called Product with two private properties of name and priceInCents.
