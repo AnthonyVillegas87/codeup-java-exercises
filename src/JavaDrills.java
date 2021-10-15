@@ -1,3 +1,6 @@
+import java.util.Arrays;
+import java.util.List;
+
 public class JavaDrills {
 
     public static String flipOuterCase(String text) {
@@ -11,6 +14,15 @@ public class JavaDrills {
             }
         }
         return new String(chars);
+    }
+
+
+
+    public static List<Integer> returnTotalDifference(List<Integer> one, List<Integer> two) {
+
+       one.stream().mapToInt(Integer::intValue).sum();
+
+        two.stream().mapToInt(Integer::intValue).sum();
     }
 
 
