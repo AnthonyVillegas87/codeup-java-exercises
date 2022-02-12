@@ -16,14 +16,22 @@ public class JavaDrills {
         return new String(chars);
     }
 
+//    public static String flipInnerCase(String string) {
+//        char[] chars = string.toCharArray();
+//        for(int i = 1; i < chars.length - 1; i++) {
+//            if((String.valueOf(chars))) {
+//
+//            }
+//        }
+//    }
 
 
-    public static List<Integer> returnTotalDifference(List<Integer> one, List<Integer> two) {
-
-       one.stream().mapToInt(Integer::intValue).sum();
-
-        two.stream().mapToInt(Integer::intValue).sum();
-    }
+//    public static List<Integer> returnTotalDifference(List<Integer> one, List<Integer> two) {
+//
+//       one.stream().mapToInt(Integer::intValue).sum();
+//
+//        two.stream().mapToInt(Integer::intValue).sum();
+//    }
 
 
     public static void main(String[] args) {
