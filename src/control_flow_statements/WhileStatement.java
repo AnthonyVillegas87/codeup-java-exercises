@@ -15,10 +15,7 @@ public class WhileStatement {
         }
 
         count = 1;
-        while(true) {
-            if(count == 5) {
-                break;
-            }
+        while (count != 5) {
             System.out.println("My value is " + count);
             count++;
         }
