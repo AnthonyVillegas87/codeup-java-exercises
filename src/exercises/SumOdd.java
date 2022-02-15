@@ -12,19 +12,19 @@ public class SumOdd {
     }
 
     public static int sumOdd(int start, int end) {
-       if(!((start <= end) || (start > 0 && end > 0))) {
-           return -1;
-       }
-
-        for(int i = 0; i <= end; i++) {
+        if ( (end < start) || (start < 0) || (end < 0) ){
+            return -1;
+        }
+        int sum = 0;
+        for(int i = start; i <= end; i++) {
 
             if(isOdd(i)) {
 
-                start += i;
+                sum += i;
                 System.out.println(i);
             }
 
         }
-        return start;
+        return sum;
     }
 }
