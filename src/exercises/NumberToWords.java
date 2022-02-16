@@ -54,16 +54,16 @@ public class NumberToWords {
             while(reversedNumber > 0) {
                 remainder = reversedNumber % 10;
                 switch (remainder) {
-                    case 0 -> string = string + "Zero";
-                    case 1 -> string = string + "One";
-                    case 2 -> string = string + "Two";
-                    case 3 -> string = string + "Three";
-                    case 4 -> string = string + "Four";
-                    case 5 -> string = string + "Five";
-                    case 6 -> string = string + "Six";
-                    case 7 -> string = string + "Seven";
-                    case 8 -> string = string + "Eight";
-                    case 9 -> string = string + "Nine";
+                    case 0 -> string = string + "Zero ";
+                    case 1 -> string = string + "One ";
+                    case 2 -> string = string + "Two ";
+                    case 3 -> string = string + "Three ";
+                    case 4 -> string = string + "Four ";
+                    case 5 -> string = string + "Five ";
+                    case 6 -> string = string + "Six ";
+                    case 7 -> string = string + "Seven ";
+                    case 8 -> string = string + "Eight ";
+                    case 9 -> string = string + "Nine ";
                     default -> {
                     }
                 }
