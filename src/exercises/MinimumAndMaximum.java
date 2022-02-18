@@ -8,18 +8,20 @@ public class MinimumAndMaximum {
         Scanner sc = new Scanner(System.in);
         int maxNumber = 0;
         int minNumber = 0;
+
         int count = 0;
 
         while(true) {
-            int order = count + 1;
+
             System.out.println("Please enter a number: ");
             boolean isNextInt = sc.hasNextInt();
 
             if(isNextInt) {
                 int number = sc.nextInt();
                 count++;
-                maxNumber = number;
-                minNumber = number;
+                maxNumber = Math.max(number, minNumber);
+                minNumber = Math.min(number, maxNumber);
+
                 if(count == 2) {
                     break;
                 }
