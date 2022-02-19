@@ -19,7 +19,7 @@ public class InsertionSort {
             int newElement = array[firstUnsortedIndex];
             //Declare i outside the loop because we'll need it after the loop
             int i;
-            //loop for the traversal of the sorted partition & looks for the correct position to insert our newElemet
+            //loop for the traversal of the sorted partition & looks for the correct position to insert our newElement
             for(i = firstUnsortedIndex; i > 0 && array[i - 1] > newElement; i--) {
                 array[i] = array[i - 1];
             }
