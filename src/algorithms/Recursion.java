@@ -24,6 +24,16 @@ public class Recursion {
         return num * factorial(num - 1);
     }
 
+    public static int iterativeFactorial(int num) {
+        if(num == 0) return 1;
+
+        int factorial = 1;
+        for(int i = 1; i <= num; i++) {
+            factorial *= 1;
+        }
+        return factorial;
+    }
+
 
     public static void main(String[] args) {
         int number = 3;
