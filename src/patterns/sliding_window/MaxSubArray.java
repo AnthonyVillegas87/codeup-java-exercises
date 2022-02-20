@@ -25,20 +25,15 @@ public class MaxSubArray {
         * Time Complexity O(n) - Linear
          */
             public static int MaxSumSubArray(int k, int[] arr) {
-
                 int maxSum = 0;
                 int tempSum = 0;
-
-
                 if(arr.length < k) return -1;
 
                 // This loop sums together the first k digits, store in variable of maxSum
                 for(int i = 0; i < k; i++) {
                     maxSum += arr[i];
                 }
-
                 tempSum = maxSum;
-
                 //Loop over the array once but start after the sum of the first 2 digits
                 for(int j = k; j < arr.length; j++) {
                     tempSum = tempSum - arr[j - k] + arr[j];
@@ -46,6 +41,22 @@ public class MaxSubArray {
                 }
                 return maxSum;
             }
+
+        public static int maxSumSubArray(int k, int[] arr) {
+            int windowSum = 0, maxSum = 0;
+            int windowStart = 0;
+            for (int windowEnd = 0; windowEnd < arr.length; windowEnd++) {
+                windowSum += arr[windowEnd]; // add the next element
+                // slide the window, we don't need to slide if we've not hit the required window size of 'k'
+                if (windowEnd >= k - 1) {
+                    maxSum = Math.max(maxSum, windowSum);
+                    windowSum -= arr[windowStart]; // subtract the element going out
+                    windowStart++; // slide the window ahead
+                }
+            }
+
+            return maxSum;
+        }
 
 
 
