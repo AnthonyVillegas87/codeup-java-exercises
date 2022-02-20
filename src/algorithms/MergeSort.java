@@ -55,9 +55,15 @@ public class MergeSort {
     }
 
     public static void merge(int[] array, int start, int mid, int end) {
+        //Checking in ascending order
         if(array[mid - 1] <= array[mid]) {
             return;
         }
+
+        //Checking in descending order
+//        if(array[mid - 1] >= array[mid]) {
+//            return;
+//        }
 
         int i = start;
         int j = mid;
@@ -65,7 +71,12 @@ public class MergeSort {
 
         int[] temp = new int[end - start];
         while(i < mid && j < end) {
+            //Checking in ascending order
             temp[tempIndex++] = array[i] <= array[j] ? array[i++] : array[j++];
+
+            //Checking in descending order
+//            temp[tempIndex++] = array[i] >= array[j] ? array[i++] : array[j++];
+
         }
         //Copy any leftover elements into sorted array:
         // 1st parameter takes original array
