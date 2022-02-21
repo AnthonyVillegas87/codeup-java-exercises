@@ -19,5 +19,18 @@ public class Main {
 
         bobsAccount.deposit(101);
         bobsAccount.withdraw(40);
+
+        BankAccount joesAccount;
+        joesAccount = new BankAccount("Joe", "joesemail@yahoo.com", "(512) 882-2517");
+        System.out.println(joesAccount.getAccountNumber() + " name " + joesAccount.getCustomerName());
+
+        VipCustomer person1 = new VipCustomer();
+        System.out.println(person1.getCustomerName());
+
+        VipCustomer person2 = new VipCustomer("Craig", 18000.00);
+        System.out.println(person2.getCustomerName());
+
+        VipCustomer person3 = new VipCustomer("Ray", 500.00, "rayemail@yahoo.com");
+        System.out.println(person3.getCustomerName());
     }
 }
