@@ -7,8 +7,9 @@ public class PersonTest {
     public static void main(String[] args) {
         Person person = new Person();
         person.setName("George");
-        person.sayHello();
-        System.out.println(person.getName());
+       person.setAge(10);
+        System.out.println("name = " + person.getName());
+        System.out.println("teen = " + person.isTeen());
 
 //        Person person1 = new Person("John");
 //        Person person2 = new Person("John");
