@@ -4,6 +4,11 @@ import java.util.HashMap;
 import java.util.Map;
 
 class CharacterReplacement {
+
+    /*
+    * Time Complexity O(n)
+     */
+
     public static int findLength(String str, int k) {
         int windowStart = 0, maxLength = 0, maxRepeatLetterCount = 0;
 
