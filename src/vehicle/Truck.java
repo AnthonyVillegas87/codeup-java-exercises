@@ -2,6 +2,10 @@ package vehicle;
 
 public class Truck extends Vehicle{
 
+    public Truck(String name, String size) {
+        super(name, size);
+    }
+
     @Override
     public void makeNoise() {
         System.out.println("Honk Honk!");
@@ -9,8 +13,5 @@ public class Truck extends Vehicle{
         System.out.println("Ka-plunk");
     }
 
-    Truck(String name) {
-        super(name);
-    }
 
 }

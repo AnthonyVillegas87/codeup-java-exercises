@@ -1,8 +1,9 @@
 package vehicle;
 
 public final class Tractor extends Vehicle{
-    Tractor(String name) {
-        super(name);
+
+    public Tractor(String name, String size) {
+        super(name, size);
     }
 
     @Override
