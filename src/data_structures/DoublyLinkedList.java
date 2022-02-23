@@ -1,5 +1,10 @@
 package data_structures;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
+import java.util.Iterator;
+import java.util.LinkedList;
+
 public class DoublyLinkedList {
 
 
@@ -131,6 +136,58 @@ public class DoublyLinkedList {
         list.removeFromEnd();
         list.printList();
         System.out.println(list.getSize());
+
+
+
+        Employee mikeJones = new Employee("Mike", "Jones", 2005);
+        Employee slimThug = new Employee("Slim", "Thug", 2006);
+        Employee snoopDogg = new Employee("Snoop", "Dogg", 1995);
+        Employee tupac = new Employee("Tupac", "Shakur", 1993);
+        Employee notorious = new Employee("Notorious", "B.I.G", 1993);
+
+        LinkedList<Employee> linkedList = new LinkedList<>();
+        linkedList.addFirst(mikeJones);
+        linkedList.addFirst(slimThug);
+        linkedList.addFirst(snoopDogg);
+        linkedList.addFirst(tupac);
+
+
+        Iterator iter = linkedList.iterator();
+        System.out.println("HEAD -> ");
+        while(iter.hasNext()) {
+            System.out.println(iter.next());
+            System.out.println(" < = > ");
+        }
+        System.out.println("null");
+
+        linkedList.add(notorious);
+        iter = linkedList.iterator();
+        System.out.println("HEAD -> ");
+        while(iter.hasNext()) {
+            System.out.println(iter.next());
+            System.out.println(" < = > ");
+        }
+        System.out.println("null");
+
+        linkedList.removeFirst();
+        iter = linkedList.iterator();
+        System.out.println("HEAD -> ");
+        while(iter.hasNext()) {
+            System.out.println(iter.next());
+            System.out.println(" < = > ");
+        }
+        System.out.println("null");
+
+        linkedList.removeLast();
+        iter = linkedList.iterator();
+        System.out.println("HEAD -> ");
+        while(iter.hasNext()) {
+            System.out.println(iter.next());
+            System.out.println(" < = > ");
+        }
+        System.out.println("null");
+
+
 
     }
 
