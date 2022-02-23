@@ -12,6 +12,39 @@ public class DoublyLinkedList {
     private EmployeeNode tail;
     private int size;
 
+    /// ========================================= ADD BEFORE
+    public boolean addBefore(Employee newEmployee, Employee existingEmployee) {
+
+        if(head == null) {
+            return false;
+        }
+
+        // find existing employee
+        EmployeeNode current = head;
+        while (current != null && !current.getEmployee().equals(existingEmployee)) {
+            current = current.getNext();
+        }
+         if(current == null) {
+             return false;
+         }
+
+         EmployeeNode newNode = new EmployeeNode(newEmployee);
+         newNode.setPrevious(current.getPrevious());
+         newNode.setNext(current);
+
+         current.setPrevious(newNode);
+         if(head == current) {
+             head = newNode;
+         } else {
+             newNode.getPrevious().setNext(newNode);
+         }
+
+         size++;
+
+        return true;
+    }
+
+
     /// ==========================================     REMOVING FROM FRONT OF LIST
     public void removeFromFront() {
         if(isEmpty()) return;
@@ -113,18 +146,24 @@ public class DoublyLinkedList {
         Employee johnDoe = new Employee("John", "Doe", 4567);
         Employee marySmith = new Employee("Mary", "Smith", 223);
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
+        Employee billEnd = new Employee("Bill", "End", 78);
 
         DoublyLinkedList list = new DoublyLinkedList();
         list.addToFront(janeJones);
         list.addToFront(johnDoe);
         list.addToFront(marySmith);
         list.addToFront(mikeWilson);
-
         list.printList();
-        System.out.println(list.getSize());
 
-        Employee billEnd = new Employee("Bill", "End", 78);
-        list.addToEnd(billEnd);
+//        System.out.println(list.getSize());
+
+
+        list.addBefore(billEnd, johnDoe);
+        list.printList();
+//        list.addToEnd(billEnd);
+
+        list.addBefore(new Employee("New", "Guy", 2517), mikeWilson);
+        list.printList();
 
         list.printList();
         System.out.println(list.getSize());
