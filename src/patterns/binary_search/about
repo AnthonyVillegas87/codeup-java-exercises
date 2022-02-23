@@ -1,0 +1,14 @@
+As we know, whenever we are given a sorted Array or LinkedList or Matrix, and we are asked to find a certain element, the best algorithm we can use is the Binary Search.
+
+This pattern describes an efficient way to handle all problems involving Binary Search.
+We will go through a set of problems that will help us build an understanding of this pattern so that we can apply this technique to other problems we might come across in the interviews.
+
+Binary search runs in logarithmic time in the worst case, making  O(log n) comparisons, where n is the number of elements in the array.
+Binary search is faster than linear search except for small arrays.
+However, the array must be sorted first to be able to apply binary search.
+There are specialized data structures designed for fast searching, such as hash tables, that can be searched more efficiently than binary search.
+However, binary search can be used to solve a wider range of problems, such as finding the next-smallest or next-largest element in the array relative to the target even if it is absent from the array.
+
+There are numerous variations of binary search. In particular, fractional cascading speeds up binary searches for the same value in multiple arrays. Fractional cascading efficiently solves a number of search problems in computational geometry and in numerous other fields. Exponential search extends binary search to unbounded lists. The binary search tree and B-tree data structures are based on binary search.
+
+Let’s start with our first problem.
