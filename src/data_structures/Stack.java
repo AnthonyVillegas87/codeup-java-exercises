@@ -1,5 +1,8 @@
 package data_structures;
 
+import java.util.LinkedList;
+import java.util.ListIterator;
+
 public class Stack {
     /*
     * Abstract data type
@@ -16,10 +19,44 @@ public class Stack {
     * LINKED LIST IDEAL!!!!
     *
      */
+    private LinkedList<Employee> stack;
+
+    public Stack() {
+        stack = new LinkedList<Employee>();
+    }
+
+    public void push(Employee employee) {
+        stack.push(employee);
+    }
+
+    public Employee pop() {
+       return stack.pop();
+    }
+
+    public Employee peek() {
+        return stack.peek();
+    }
+
+    public boolean isEmpty() {
+        return stack.isEmpty();
+    }
+
+    public void printStack() {
+        ListIterator<Employee> iterator = stack.listIterator();
+        while(iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+    }
+
+
+
 
     public static void main(String[] args) {
         //==========  Implementation 1 ARRAYS
-        ArrayStack stack = new ArrayStack(10);
+//        ArrayStack stack = new ArrayStack(10);
+
+        //========== Implementation 2 LINKEDLIST
+        Stack stack = new Stack();
 
         stack.push(new Employee("Jane", "Jones", 123));
         stack.push(new Employee("John", "Doe", 4567));
@@ -27,9 +64,9 @@ public class Stack {
         stack.push(new Employee("Mike", "Wilson", 3245));
         stack.push(new Employee("Bill", "End", 78));
 
-        //stack.printStack();
+        stack.printStack();
 
-        System.out.println(stack.peek());
+        //System.out.println(stack.peek());
         System.out.println("Popped: " + stack.pop());
         System.out.println(stack.peek());
 
