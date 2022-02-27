@@ -76,9 +76,28 @@ public class BinarySearchTree {
             } else if(subTreeRoot.getRightChild() == null) {
                 return subTreeRoot.getLeftChild();
             }
+            //Case 3: node has two children
+
+            //=== Replace the value int the right subtreeRoot node w/ the smallest value from the right subtree
+            subTreeRoot.setData(subTreeRoot.getRightChild().min());
+            //=== Delete the node that has the smallest value in the right subtree
+            subTreeRoot.setRightChild(delete(subTreeRoot.getRightChild(), subTreeRoot.getData()));
         }
         return subTreeRoot;
+
+
     }
+
+    /*
+    * ========== Deletion of a Node w/ TWO children
+    * Need to figure out what the replacement node will be
+    * Want to find the minimal disruption to the existing tree structure
+    * Can take the replacement node from the deleted node's left subtree or right subtree
+    * If taking it from the left subtree, we have to take the largest value in the left subtree
+    * If taking it from the right subtree, we have to take the smallest value in the right subtree
+    * Choose one and stick to it!!
+     */
+
 
     public TreeNode get(int value) {
         if(root != null) {
@@ -122,8 +141,14 @@ public class BinarySearchTree {
 //        System.out.println(tree.get(27));
 //        System.out.println(tree.get(32));
 //        System.out.println(tree.get(888));
+//
+//        System.out.println(tree.min());
+//        System.out.println(tree.max());
 
-        System.out.println(tree.min());
-        System.out.println(tree.max());
+        tree.delete(15);
+
+        tree.traversInOrder();
+        System.out.println();
+
     }
 }
