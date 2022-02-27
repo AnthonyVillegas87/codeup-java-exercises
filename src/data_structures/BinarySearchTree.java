@@ -49,6 +49,30 @@ public class BinarySearchTree {
         }
     }
 
+    public TreeNode get(int value) {
+        if(root != null) {
+            return root.get(value);
+        }
+
+        return null;
+    }
+
+    public int min() {
+        if(root == null) {
+            return Integer.MAX_VALUE;
+        } else {
+            return root.min();
+        }
+    }
+
+    public int max() {
+        if(root == null) {
+           return Integer.MAX_VALUE;
+        } else {
+            return root.max();
+        }
+    }
+
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(25);
@@ -62,5 +86,13 @@ public class BinarySearchTree {
         tree.insert(32);
 
         tree.traversInOrder();
+        System.out.println();
+
+//        System.out.println(tree.get(27));
+//        System.out.println(tree.get(32));
+//        System.out.println(tree.get(888));
+
+        System.out.println(tree.min());
+        System.out.println(tree.max());
     }
 }
