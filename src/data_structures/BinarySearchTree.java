@@ -35,6 +35,20 @@ public class BinarySearchTree {
         }
     }
 
+    /*
+    * Traversal (4 ways)
+    * LEVEL - visit nodes on each level ------- NOT USED OFTEN
+    * PRE-ORDER - visit the root of every subtree first
+    * POST-ORDER - visit the root of every subtree last
+    * IN-ORDER - visit left child, then root, then right child ------ FASTER THAN MOST SORTING ALGORITHMS
+     */
+
+    public void traversInOrder() {
+        if(root != null) {
+            root.traverseInOrder();
+        }
+    }
+
     public static void main(String[] args) {
         BinarySearchTree tree = new BinarySearchTree();
         tree.insert(25);
@@ -46,5 +60,7 @@ public class BinarySearchTree {
         tree.insert(26);
         tree.insert(22);
         tree.insert(32);
+
+        tree.traversInOrder();
     }
 }
