@@ -85,6 +85,20 @@ public class TreeNode {
        }
     }
 
+    // PRE-ORDER TRAVERSAL
+    public void traversePreOrder() {
+
+        System.out.print("Data = " + data + ", ");
+        if(leftChild != null) {
+            leftChild.traversePreOrder();
+        }
+        if(rightChild != null) {
+            rightChild.traversePreOrder();
+        }
+    }
+
+
+
     public int getData() {
         return data;
     }

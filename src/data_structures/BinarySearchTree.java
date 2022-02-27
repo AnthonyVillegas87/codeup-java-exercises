@@ -49,6 +49,13 @@ public class BinarySearchTree {
         }
     }
 
+
+
+    public void traversPreOrder() {
+        if(root != null) {
+            root.traversePreOrder();
+        }
+    }
     //DELETE Cases
     /*
     * Node is a leaf
