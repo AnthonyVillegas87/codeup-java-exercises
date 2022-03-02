@@ -23,7 +23,7 @@ public class TreeNode {
                 // if there is no value at this side, we've found our insertion point
                 leftChild = new TreeNode(value);
             } else {
-                // otherwise look at the left subtree
+                // other-wise look at the left subtree
                 leftChild.insert(value);
             }
             //if value is greater than this node, explore its right subtree
@@ -32,7 +32,7 @@ public class TreeNode {
                 // if there is no value at this side, we've found our insertion point
                 rightChild = new TreeNode(value);
             } else {
-                // otherwise we look at the right subtree
+                // other-wise we look at the right subtree
                 rightChild.insert(value);
             }
         }

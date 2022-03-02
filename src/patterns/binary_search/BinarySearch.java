@@ -48,7 +48,7 @@ If key < arr[middle], then we can conclude that the key will be smaller than all
 Finally, how can we figure out the sort order of the input array? We can compare the numbers pointed out by start and end index to find the sort order. If arr[start] < arr[end], it means that the numbers are sorted in ascending order otherwise they are sorted in the descending order.
 
 
-Since, we are reducing the search range by half at every step, this means that the time complexity of our algorithm will be O(logN)O(logN) where ‘N’ is the total elements in the given array.
+Since, we are reducing the search range by half at every step, this means that the time complexity of our algorithm will be O(logN) where ‘N’ is the total elements in the given array.
      */
 
 
