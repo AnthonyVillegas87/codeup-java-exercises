@@ -2,9 +2,57 @@ package data_structures;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 import java.util.Vector;
 
 public class ArrayLists {
+    private static Scanner scanner = new Scanner(System.in);
+
+    /*
+    ArrayLists
+     */
+    private static ArrayList<String> groceryList = new ArrayList<>();
+
+    // ADD A GROCERY ITEM
+    public void addGroceryItem(String item) {
+        groceryList.add(item);
+    }
+
+    // PRINT THE ITEMS
+    public void printGroceryList() {
+        System.out.println("You have " + groceryList.size() + " items in your grocery list");
+
+        for(int i = 0; i < groceryList.size(); i++) {
+            System.out.println((i + 1) + ". " + groceryList.get(i));
+        }
+    }
+
+    // MODIFY/UPDATE A LIST OF GROCERIES
+    public void modifyGroceryItem(int position, String newItem) {
+        groceryList.set(position, newItem);
+        System.out.println("Grocery item " + (position + 1) + " has been modified");
+    }
+
+    // REMOVE THE ITEMS FROM THE LIST
+    public void removeGroceryItem(int position) {
+        String item = groceryList.get(position);
+        groceryList.remove(position);
+    }
+
+    // CHECK IF WE HAVE ITEMS IN OUR LIST
+    public String findItem(String searchItem) {
+     //   boolean exists = groceryList.contains(searchItem);
+
+        int position = groceryList.indexOf(searchItem);
+        if(position >= 0) {
+            return groceryList.get(position);
+        }
+        return null;
+
+    }
+
+
+
 
     public static void main(String[] args) {
         List<Employee> employeeList = new Vector<>();
