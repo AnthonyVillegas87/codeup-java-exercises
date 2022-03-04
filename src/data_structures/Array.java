@@ -69,6 +69,8 @@ public class Array {
         return (double) sum / (double) array.length;
     }
 
+
+
     public static void main(String[] args) {
         //Initialize the array w/ 10 elements
         int[] myIntArray = new int[25];
@@ -82,6 +84,9 @@ public class Array {
         int[] myIntegers = getIntegers(5);
         int[] sorted = sortIntegers(myIntegers);
         printArray(sorted);
+
+
+
 
 
     }
