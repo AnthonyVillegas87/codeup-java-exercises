@@ -18,6 +18,10 @@ public class ArrayLists {
         groceryList.add(item);
     }
 
+    public static ArrayList<String> getGroceryList() {
+        return groceryList;
+    }
+
     // PRINT THE ITEMS
     public void printGroceryList() {
         System.out.println("You have " + groceryList.size() + " items in your grocery list");
@@ -27,29 +31,50 @@ public class ArrayLists {
         }
     }
 
+
+
     // MODIFY/UPDATE A LIST OF GROCERIES
-    public void modifyGroceryItem(int position, String newItem) {
+    private void modifyGroceryItem(int position, String newItem) {
         groceryList.set(position, newItem);
         System.out.println("Grocery item " + (position + 1) + " has been modified");
     }
 
+    public void modifyGroceryItem(String currentItem, String newItem) {
+        int position = findItem(currentItem);
+        if(position >= 0) {
+            modifyGroceryItem(position, newItem);
+        }
+    }
+
+
     // REMOVE THE ITEMS FROM THE LIST
-    public void removeGroceryItem(int position) {
-        String item = groceryList.get(position);
+    private void removeGroceryItem(int position) {
         groceryList.remove(position);
     }
 
+    public void removeGroceryItem(String item) {
+        int position = findItem(item);
+        if(position >= 0) {
+            removeGroceryItem(position);
+        }
+    }
+
     // CHECK IF WE HAVE ITEMS IN OUR LIST
-    public String findItem(String searchItem) {
+    private int findItem(String searchItem) {
      //   boolean exists = groceryList.contains(searchItem);
 
-        int position = groceryList.indexOf(searchItem);
-        if(position >= 0) {
-            return groceryList.get(position);
-        }
-        return null;
-
+        return groceryList.indexOf(searchItem);
     }
+
+    public boolean onFile(String searchItem) {
+        int position = findItem(searchItem);
+        if(position >= 0) {
+            return true;
+        }
+
+        return false;
+    }
+
 
 
 
