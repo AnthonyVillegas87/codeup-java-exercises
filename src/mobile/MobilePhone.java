@@ -13,6 +13,13 @@ public class MobilePhone {
         this.myContacts = new ArrayList<Contact>();
     }
 
+    //Print Contacts
+    public void printContacts() {
+        System.out.println("Contact list");
+        for(int i = 0; i < this.myContacts.size(); i++) {
+            System.out.println((i + 1) + "." + this.myContacts.get(i).getName() + " -> " + this.myContacts.get(i).getPhoneNumber());
+        }
+    }
 
 
     /// AddContacts
@@ -31,7 +38,6 @@ public class MobilePhone {
 
 
     /// Modify Contacts
-
     public boolean updateContact(Contact oldContact, Contact newContact) {
        int foundPosition = findContact(oldContact);
        if(foundPosition < 0) {
@@ -46,7 +52,17 @@ public class MobilePhone {
 
 
     /// Remove Contacts
+public boolean removeContact(Contact contact) {
+    int foundPosition = findContact(contact);
+    if(foundPosition < 0) {
+        System.out.println(contact.getName() + ", was not found");
+        return false;
+    }
 
+    this.myContacts.remove(foundPosition);
+    System.out.println(contact.getName() + ", was deleted");
+    return true;
+}
 
 
 
@@ -56,7 +72,7 @@ public class MobilePhone {
     }
 
     private int findContact(String contactName) {
-        // loop thru all records & extract the name & compare that to the name thats been passed & compare to whats on file
+        // loop thru all records & extract the name & compare that to the name that's been passed & compare to what's on file
         for(int i = 0; i < this.myContacts.size(); i++) {
             // Create a new contact object
           Contact contact = this.myContacts.get(i);
@@ -67,5 +83,12 @@ public class MobilePhone {
         }
         // if not found
         return -1;
+    }
+
+    public String queryContact(Contact contact) {
+        if(findContact(contact) >= 0) {
+            return contact.getName();
+        }
+        return null;
     }
 }
