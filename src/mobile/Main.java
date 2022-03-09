@@ -40,6 +40,60 @@ public class Main {
             System.out.println("Cannot add, " + name + " already on file");
         }
     }
+    // UPDATE CONTACT
+    private static void updateContact() {
+        System.out.println("Enter existing contact name: ");
+        String name = sc.nextLine();
+       Contact existingContact = mobilePhone.queryContact(name);
+       if(existingContact == null) {
+           System.out.println("Contact not found.");
+           return;
+       }
+
+        System.out.println("Enter new contact name: ");
+        String newName = sc.nextLine();
+        System.out.println("Enter new contact phone number: ");
+        String newNumber = sc.nextLine();
+        Contact newContact = Contact.createContact(newName, newNumber);
+        if(mobilePhone.updateContact(existingContact, newContact)) {
+            System.out.println("Successful entry");
+        } else {
+            System.out.println("Error updating record");
+        }
+
+    }
+
+    //REMOVE CONTACT
+    private static void removeContact() {
+        System.out.println("Enter existing contact name: ");
+        String name = sc.nextLine();
+        Contact existingContact = mobilePhone.queryContact(name);
+        if (existingContact == null) {
+            System.out.println("Contact not found.");
+            return;
+        }
+
+        if(mobilePhone.removeContact(existingContact)) {
+            System.out.println("Successfully deleted");
+        } else {
+            System.out.println("Error deleting record");
+        }
+    }
+
+
+    // QUERY CONTACT
+    private static void queryContact() {
+        System.out.println("Enter existing contact name: ");
+        String name = sc.nextLine();
+        Contact existingContact = mobilePhone.queryContact(name);
+        if (existingContact == null) {
+            System.out.println("Contact not found.");
+            return;
+        }
+
+        System.out.println("Name: " + existingContact.getName() + " phone number is " + existingContact.getPhoneNumber());
+
+    }
 
     public static void main(String[] args) {
 

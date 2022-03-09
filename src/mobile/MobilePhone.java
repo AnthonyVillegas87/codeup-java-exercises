@@ -91,4 +91,12 @@ public boolean removeContact(Contact contact) {
         }
         return null;
     }
+
+    public Contact queryContact(String name) {
+        int position = findContact(name);
+        if(position >= 0) {
+            return this.myContacts.get(position);
+        }
+        return null;
+    }
 }
