@@ -16,6 +16,10 @@ public class Branch {
         return name;
     }
 
+    public ArrayList<Customer> getCustomers() {
+        return customers;
+    }
+
     // ADD A NEW CUSTOMER WITH AN INITIAL TRANSACTION AMOUNT
     public boolean newCustomer(String customerName, double initAmount) {
         if(findCustomer(customerName) == null) {
@@ -33,7 +37,7 @@ public class Branch {
 
         // GRAB EXISTING CUSTOMER RECORD AND UPDATE IT WITH EACH TRANSACTION MADE
         Customer existingCustomer = findCustomer(customerName);
-        if(findCustomer(customerName) != null) {
+        if(existingCustomer != null) {
 
             // CALLING addTransaction() from the CUSTOMER CLASS
             existingCustomer.addTransaction(amount);
