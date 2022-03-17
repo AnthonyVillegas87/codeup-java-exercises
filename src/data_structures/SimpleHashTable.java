@@ -1,13 +1,28 @@
 package data_structures;
 
-public class HashTable {
+class StoredEmployee {
+
+public String key;
+public Employee employee;
+
+    public StoredEmployee(String key, Employee employee) {
+        this.key = key;
+        this.employee = employee;
+    }
+}
+
+
+
+
+
+public class SimpleHashTable {
     // Hash Tables
     // THEY EXIST TO PROVIDE SPEEDY RETRIEVAL OF DATA
 
-    private Employee[] hashTable;
+    private StoredEmployee[] hashTable;
 
-    public HashTable() {
-        hashTable = new Employee[10];
+    public SimpleHashTable() {
+        hashTable = new StoredEmployee[10];
     }
 
     //Hash function to take a string & hashing it to an int
@@ -17,21 +32,70 @@ public class HashTable {
     // Function to add keys/value int table
     public void put(String key, Employee employee) {
         int hashedKey = hashKey(key);
-        if(hashTable[hashedKey] != null) {
+        if(occupied(hashedKey)) {
+            int stopIndex = hashedKey;
+            if(hashedKey == hashTable.length - 1) {
+                hashedKey = 0;
+            } else {
+                hashedKey++;
+            }
+            while (occupied(hashedKey) && hashedKey != stopIndex) {
+                hashedKey = (hashedKey + 1) % hashTable.length;
+            }
+        }
+
+
+        if(occupied(hashedKey)) {
             System.out.println("Sorry, an employee exists at position " + hashedKey);
         } else {
-            hashTable[hashedKey] = employee;
+            hashTable[hashedKey] = new StoredEmployee(key, employee);
         }
     }
 
     public Employee get(String key) {
+        int hashedKey = findKey(key);
+        if(hashedKey == -1) {
+            return null;
+        }
+        return hashTable[hashedKey].employee;
+    }
+
+    private int findKey(String key) {
         int hashedKey = hashKey(key);
-        return hashTable[hashedKey];
+        if(hashTable[hashedKey] != null &&
+            hashTable[hashedKey].key.equals(key)) {
+            return hashedKey;
+        }
+
+
+        int stopIndex = hashedKey;
+        if (hashedKey == hashTable.length - 1) {
+            hashedKey = 0;
+        } else {
+            hashedKey++;
+        }
+        while (hashedKey != stopIndex && hashTable[hashedKey] != null && !hashTable[hashedKey].key.equals(key)) {
+
+            hashedKey = (hashedKey + 1) % hashTable.length;
+        }
+
+        if(stopIndex == hashedKey) {
+            return -1;
+        } else {
+            return hashedKey;
+        }
+
+
     }
 
     public void printTable() {
       for(int i = 0; i < hashTable.length; i++) {
-          System.out.println(hashTable[i]);
+          if (hashTable[i] == null) {
+              System.out.println("Empty");
+          } else {
+              System.out.println("Position " + i + ": " + hashTable[i].employee);
+          }
+
       }
     }
 
@@ -44,12 +108,23 @@ public class HashTable {
     * Associative array is one type of hash table
      */
 
+    // Linear Probing ========  Collision Handling Solution 1 : Open Addressing
+    private boolean occupied(int index) {
+        return hashTable[index] != null;
+
+    }
+
     /*
     // Hashing
     * Maps keys of any data type to an integer
     * Hash function maps keys to int
     * In java, hash function is Object.hashCode()
     * Collision occurs when more than one value has the same hashed value
+
+
+
+
+
 
     // Load Factor
     * Tells us how full a hash table is
@@ -74,15 +149,16 @@ public class HashTable {
         Employee mikeWilson = new Employee("Mike", "Wilson", 3245);
         Employee billEnd = new Employee("Bill", "End", 78);
 
-        HashTable ht = new HashTable();
+        SimpleHashTable ht = new SimpleHashTable();
         ht.put("Jones", janeJones);
         ht.put("Doe", johnDoe);
         ht.put("Wilson", mikeWilson);
         ht.put("Smith", marySmith); // Intentional Collision
 
-       // ht.printTable();
+        ht.printTable();
 
         System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
+        System.out.println("Retrieve key Smith: " + ht.get("Smith"));
     }
 
 }
