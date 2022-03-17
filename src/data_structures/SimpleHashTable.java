@@ -75,15 +75,14 @@ public class SimpleHashTable {
             hashedKey++;
         }
         while (hashedKey != stopIndex && hashTable[hashedKey] != null && !hashTable[hashedKey].key.equals(key)) {
-
             hashedKey = (hashedKey + 1) % hashTable.length;
         }
 
-        if(stopIndex == hashedKey) {
-            return -1;
-        } else {
-            return hashedKey;
-        }
+       if (hashTable[hashedKey] != null && hashTable[hashedKey].key.equals(key)) {
+           return hashedKey;
+       } else {
+           return -1;
+       }
 
 
     }
@@ -113,6 +112,15 @@ public class SimpleHashTable {
         return hashTable[index] != null;
 
     }
+    public Employee remove(String key) {
+        int hashedKey = findKey(key);
+        if (hashedKey == -1) {
+            return null;
+        }
+        Employee employee = hashTable[hashedKey].employee;
+        hashTable[hashedKey] = null;
+        return employee;
+    }
 
     /*
     // Hashing
@@ -120,11 +128,6 @@ public class SimpleHashTable {
     * Hash function maps keys to int
     * In java, hash function is Object.hashCode()
     * Collision occurs when more than one value has the same hashed value
-
-
-
-
-
 
     // Load Factor
     * Tells us how full a hash table is
@@ -159,6 +162,10 @@ public class SimpleHashTable {
 
         System.out.println("Retrieve key Wilson: " + ht.get("Wilson"));
         System.out.println("Retrieve key Smith: " + ht.get("Smith"));
+
+        ht.remove("Wilson");
+        ht.remove("Jones");
+        ht.printTable();
     }
 
 }
