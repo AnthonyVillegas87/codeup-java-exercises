@@ -9,6 +9,9 @@ public class Main {
     //THE PROGRAM WILL HAVE AN ALBUM CLASS CONTAINING A LIST OF SONGS
     //THE ALBUMS WILL BE STORED IN AN ARRAYLIST
     //SONGS FROM DIFFERENT ALBUMS CAN BE ADDED TO THE PLAYLIST AND WILL APPEAR IN THE LIST IN THE ORDER THEY ARE ADDED
+
+    //OPTIONAL// PROVIDE AN OPTION TO REMOVE CURRENT SONG FROM THE PLAYLIST
+
     private static ArrayList<Album> albums = new ArrayList<Album>();
 
     private static void printMenu() {
@@ -18,7 +21,8 @@ public class Main {
                 "2 - to play previous song\n" +
                 "3 - to replay the current song\n" +
                 "4 - list songs in the playlist\n" +
-                "5 - print available actions.");
+                "5 - print available actions." +
+                "6 - delete current song from playlist");
     }
 
     private static void printList(LinkedList<Song> playList) {
@@ -34,6 +38,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         boolean quit = false;
         boolean forward = true;
+
 
 
         ListIterator<Song> listIterator = playList.listIterator();
@@ -54,6 +59,7 @@ public class Main {
                     System.out.println("Playlist complete");
                     quit = true;
                     break;
+
                 case 1:
                     if(!forward) {
                         if(listIterator.hasNext()) {
@@ -108,6 +114,17 @@ public class Main {
 
                 case 5:
                     printMenu();
+                    break;
+
+                case 6:
+                    if (playList.size() > 0) {
+                        listIterator.remove();
+                        if(listIterator.hasNext()) {
+                            System.out.println("Now playing " + listIterator.next());
+                        } else if(listIterator.hasPrevious()) {
+                            System.out.println("Now playing " + listIterator.previous());
+                        }
+                    }
                     break;
             }
         }
