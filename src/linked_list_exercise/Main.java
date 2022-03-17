@@ -1,9 +1,6 @@
 package linked_list_exercise;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.ListIterator;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
 
@@ -13,6 +10,25 @@ public class Main {
     //THE ALBUMS WILL BE STORED IN AN ARRAYLIST
     //SONGS FROM DIFFERENT ALBUMS CAN BE ADDED TO THE PLAYLIST AND WILL APPEAR IN THE LIST IN THE ORDER THEY ARE ADDED
     private static ArrayList<Album> albums = new ArrayList<Album>();
+
+    private static void printMenu() {
+        System.out.println("Available actions:\npress");
+        System.out.println("0 - to quit\n" +
+                "1 - to play next song\n" +
+                "2 - to play previous song\n" +
+                "3 - to replay the current song\n" +
+                "4 - list songs in the playlist\n" +
+                "5 - print available actions.");
+    }
+
+    private static void printList(LinkedList<Song> playList) {
+        Iterator<Song> iterator = playList.iterator();
+        System.out.println("========================");
+        while(iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+        System.out.println("=========================");
+    }
 
     private static void play(LinkedList<Song> playList) {
         Scanner scanner = new Scanner(System.in);
@@ -26,6 +42,7 @@ public class Main {
             return;
         } else {
             System.out.println("Now playing " + listIterator.next().toString());
+           printMenu();
         }
 
         while(!quit) {
@@ -68,10 +85,27 @@ public class Main {
                     break;
 
                 case 3:
+                    if(forward) {
+                        if (listIterator.hasPrevious()) {
+                            System.out.println("Replay " + listIterator.previous().toString());
+                            forward = false;
+                        } else {
+                            System.out.println("We are at the start of the list");
+                        }
+                    } else {
+                        if (listIterator.hasNext()) {
+                            System.out.println("Now replaying " + listIterator.next().toString());
+                            forward = true;
+                        } else {
+                            System.out.println("We have reached the end of the list");
+                        }
+                    }
                     break;
+
                 case 4:
                     printList(playList);
                     break;
+
                 case 5:
                     printMenu();
                     break;
