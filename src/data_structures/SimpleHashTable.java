@@ -130,6 +130,9 @@ public class SimpleHashTable {
         return employee;
     }
 
+
+
+
     /*
     // Hashing
     * Maps keys of any data type to an integer
