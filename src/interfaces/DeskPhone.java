@@ -1,6 +1,5 @@
 package interfaces;
 
-import java.sql.SQLOutput;
 
 public class DeskPhone implements ITelephone {
 
