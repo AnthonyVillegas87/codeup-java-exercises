@@ -55,7 +55,12 @@ public class Main {
         System.out.println(cloud);
         cloud.setWeapon("Stormbringer");
         saveObject(cloud);
-        loadObject(cloud);
+        //loadObject(cloud);
         System.out.println(cloud);
+
+    ISaveable werewolf = new Enemy("Werewolf", 35, 40);
+        System.out.println(werewolf);
+        saveObject(werewolf);
+
     }
 }
