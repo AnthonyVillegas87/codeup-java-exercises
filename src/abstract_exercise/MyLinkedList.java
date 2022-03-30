@@ -33,10 +33,9 @@ public class MyLinkedList implements NodeList {
             } else if(compare > 0) {
 
                 if(currentItem.previous() != null) {
-                    currentItem.previous().setNext(newItem).setPrevious(currentItem.previous());
-                    newItem.setNext(currentItem).setPrevious(newItem);
+                  currentItem = currentItem.previous();
                 } else {
-                    newItem.setNext(this.root).setPrevious(newItem);
+                    currentItem.setPrevious(newItem);
                     this.root = newItem;
                 }
             } else {
@@ -86,7 +85,6 @@ public class MyLinkedList implements NodeList {
                 root = root.next();
             }
         }
-
 
     }
 }
