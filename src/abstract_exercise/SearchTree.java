@@ -1,5 +1,7 @@
 package abstract_exercise;
 
+import java.util.List;
+
 public class SearchTree implements NodeList{
     private ListItem root = null;
 
@@ -52,8 +54,42 @@ public class SearchTree implements NodeList{
             System.out.println("Deleting item " + item.getValue());
         }
 
+        ListItem currentItem = this.root;
+        ListItem parentItem = currentItem;
 
+        while(currentItem != null) {
+            int comparison = (currentItem.compareTo(item));
+            if (comparison < 0) {
+                parentItem = currentItem;
+                currentItem = currentItem.previous();
+            } else if(comparison > 0) {
+                parentItem = currentItem;
+                currentItem = currentItem.previous();
+            } else {
+                performRemoval(currentItem, parentItem);
+                return true;
+            }
+        }
         return false;
+    }
+
+    private void performRemoval(ListItem item, ListItem parent) {
+        if (item.next() == null) {
+            if(parent.next() == item) {
+                parent.setNext(item.previous());
+            } else if (parent.previous() == item) {
+                parent.setPrevious(item.previous());
+            } else {
+                this.root = item.previous();
+            }
+        } else if (item.previous() == null) {
+            if(parent.next() == item) {
+                parent.setNext(item.next());
+            } else if(parent.previous() == item) {
+                parent.setPrevious(item.next());
+            }
+        }
+
     }
 
     @Override
