@@ -14,22 +14,33 @@ public class Main {
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer cristiano = new SoccerPlayer("Cristiano");
 
-        Team<FootballPlayer> myTeam = new Team<>("Luchadores");
-        myTeam.addPlayer(tom);
+        Team<FootballPlayer> tampa = new Team<>("Tampa Bay");
+        tampa.addPlayer(tom);
 //        myTeam.addPlayer(pat);
 //        myTeam.addPlayer(cristiano);
 
-        System.out.println(myTeam.numPlayers());
+        System.out.println(tampa.numPlayers());
         Team<BaseballPlayer> baseballPlayerTeam = new Team<>("Chicago Cubs");
         baseballPlayerTeam.addPlayer(pat);
 
         Team<SoccerPlayer> soccerPlayerTeam = new Team<>("Portugal");
         soccerPlayerTeam.addPlayer(cristiano);
-//        ArrayList<Integer> items = new ArrayList<>();
-//        items.add(5);
-//        items.add(10);
-//        items.add(15);
-//
-//        printDouble(items);
+
+
+
+
+        Team<FootballPlayer> miami = new Team<>("Miami Dolphins");
+        FootballPlayer tua = new FootballPlayer("Tua Tagovailoa");
+        miami.addPlayer(tua);
+
+        Team<FootballPlayer> newEngland = new Team<>("New England Patriots");
+        Team<FootballPlayer> indianapolis = new Team<>("Indianapolis Colts");
+        newEngland.matchResult(indianapolis,7, 10 );
+        newEngland.matchResult(miami, 21, 6);
+
+        tampa.matchResult(miami, 24, 21);
+
+
+
     }
 }
