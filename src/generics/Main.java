@@ -14,12 +14,17 @@ public class Main {
         BaseballPlayer pat = new BaseballPlayer("Pat");
         SoccerPlayer cristiano = new SoccerPlayer("Cristiano");
 
-        Team myTeam = new Team("Luchadores");
+        Team<FootballPlayer> myTeam = new Team<>("Luchadores");
         myTeam.addPlayer(tom);
-        myTeam.addPlayer(pat);
-        myTeam.addPlayer(cristiano);
+//        myTeam.addPlayer(pat);
+//        myTeam.addPlayer(cristiano);
 
         System.out.println(myTeam.numPlayers());
+        Team<BaseballPlayer> baseballPlayerTeam = new Team<>("Chicago Cubs");
+        baseballPlayerTeam.addPlayer(pat);
+
+        Team<SoccerPlayer> soccerPlayerTeam = new Team<>("Portugal");
+        soccerPlayerTeam.addPlayer(cristiano);
 //        ArrayList<Integer> items = new ArrayList<>();
 //        items.add(5);
 //        items.add(10);
