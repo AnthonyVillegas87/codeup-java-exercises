@@ -16,8 +16,7 @@ public class Main {
 
         Team<FootballPlayer> tampa = new Team<>("Tampa Bay");
         tampa.addPlayer(tom);
-//        myTeam.addPlayer(pat);
-//        myTeam.addPlayer(cristiano);
+
 
         System.out.println(tampa.numPlayers());
         Team<BaseballPlayer> baseballPlayerTeam = new Team<>("Chicago Cubs");
@@ -40,7 +39,12 @@ public class Main {
 
         tampa.matchResult(miami, 24, 21);
 
-
-
+        System.out.println("Rankings");
+        System.out.println(miami.getName() + ": " + miami.ranking());
+        System.out.println(newEngland.getName() + ": " + newEngland.ranking());
+        System.out.println(tampa.getName() + ": " + tampa.ranking());
+        System.out.println(indianapolis.getName() + ": " + indianapolis.ranking());
+        System.out.println(miami.compareTo(tampa));
+        System.out.println(newEngland.compareTo(indianapolis));
     }
 }
