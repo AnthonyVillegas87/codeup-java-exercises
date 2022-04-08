@@ -1,5 +1,7 @@
 package scope;
 
+import java.util.Scanner;
+
 public class Main {
 
 
@@ -18,6 +20,10 @@ public class Main {
 //        System.out.println("***************************");
 //        ScopeCheck.InnerClass innerClass = instance.new InnerClass();
 //        innerClass.timesTwo();
+
+
+        X x = new X(new Scanner(System.in));
+        x.x();
     }
 
 }
