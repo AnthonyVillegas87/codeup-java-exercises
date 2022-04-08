@@ -4,16 +4,20 @@ public class Main {
 
 
     public static void main(String[] args) {
-        String privateInt = "This is private to main()";
+        String intFour = "This is private to main()";
 
         ScopeCheck instance = new ScopeCheck();
-        System.out.println("scopeInstance created, privateInt is " + instance.getPrivateInt());
-        System.out.println(privateInt);
+        instance.useInner();
 
-        instance.timesTwo();
-        System.out.println("***************************");
         ScopeCheck.InnerClass innerClass = instance.new InnerClass();
-        innerClass.timesTwo();
+//        System.out.println("intThree is not available here " + innerClass.intThree);
+//        System.out.println("scopeInstance created, intOne is " + instance.getIntOne());
+//        System.out.println(intFour);
+//
+//        instance.timesTwo();
+//        System.out.println("***************************");
+//        ScopeCheck.InnerClass innerClass = instance.new InnerClass();
+//        innerClass.timesTwo();
     }
 
 }
