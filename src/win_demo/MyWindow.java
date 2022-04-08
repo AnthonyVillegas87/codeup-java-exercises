@@ -25,7 +25,7 @@ public class MyWindow extends Frame {
         Font sansSerifSmall = new Font("SansSerif", Font.BOLD, 12);
 
         g.setFont(sansSerifLarge);
-        g.drawString("My first Java String Package", 60, 60);
+        g.drawString("My First Java Window Package", 60, 60);
         g.setFont(sansSerifSmall);
         g.drawString("Anthony Villegas", 60,100);
 
