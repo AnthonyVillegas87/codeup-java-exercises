@@ -25,21 +25,56 @@ public class Theatre {
 
     // Reserve a particular seat for our theatre class
     public boolean reserveSeat(String seatNumber) {
-        Seat requestedSeat = null;
-        for(Seat seat : seats) {
-            if(seat.getSeatNumber().equals(seatNumber)) {
-                requestedSeat = seat;
-                break;
+
+        // EFFICIENT JDK BINARY SEARCH PT 1
+//        Seat requestedSeat = new Seat(seatNumber);
+//        int foundSeat = Collections.binarySearch(seats, requestedSeat, null);
+//        if(foundSeat >= 0) {
+//            return seats.get(foundSeat).reserve();
+//        } else {
+//            System.out.println("There is no set " + seatNumber);
+//            return false;
+//        }
+
+        //SOURCE CODE BINARY SEARCH
+        int left = 0;
+        int right = seats.size() - 1;
+
+        while(left <= right) {
+            int mid = (left + right) / 2;
+            System.out.println(".");
+            Seat midVal = seats.get(mid);
+            int compare = midVal.getSeatNumber().compareTo(seatNumber);
+
+            if(compare < 0) {
+                left = mid + 1;
+            } else if(compare > 0) {
+                right = mid - 1;
+            } else {
+                return seats.get(mid).reserve();
             }
         }
-
-        if (requestedSeat == null) {
-            System.out.println("There is no seat " + seatNumber);
-            return false;
-        }
-
-        return requestedSeat.reserve();
+        System.out.println("There is no seat " + seatNumber);
+        return false;
+        //BRUTE FORCE APPROACH
+//        for(Seat seat : seats) {
+//            System.out.print(".");
+//            if(seat.getSeatNumber().equals(seatNumber)) {
+//                requestedSeat = seat;
+//                break;
+//            }
+//        }
+//
+//        if (requestedSeat == null) {
+//            System.out.println("There is no seat " + seatNumber);
+//            return false;
+//        }
+//
+//        return requestedSeat.reserve();
     }
+
+
+
     // Return/Print out our list of seats
     public void getSeats() {
         for(Seat seat : seats) {
@@ -51,12 +86,17 @@ public class Theatre {
 
 
     //Private Seat inner class
-    private class Seat {
+    private class Seat implements Comparable<Seat>{
         private final String seatNumber;
         private boolean reserved = false;
 
         public Seat(String seatNumber) {
             this.seatNumber = seatNumber;
+        }
+
+        @Override
+        public int compareTo(Seat seat) {
+            return this.seatNumber.compareToIgnoreCase(seat.getSeatNumber());
         }
 
         public boolean reserve() {
