@@ -43,7 +43,7 @@ public class QuickSort {
 
             //NOTE: empty loop body
             //using the prefix increment/decrement operators.
-            while(i < j && array[--j] >= pivot) ;
+            while(i < j && array[--j] >= pivot);
                if(i < j) {
                    array[i] = array[j];
                }
