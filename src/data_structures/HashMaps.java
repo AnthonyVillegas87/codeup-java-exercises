@@ -39,7 +39,7 @@ public class HashMaps {
         hashMap.putIfAbsent("Doe", mikeWilson);
 
         //Iterator interface is part of the Collections Framework can implement the following Interfaces:
-        // List, Map, Set, Comparator, SortedSet
+        // List, Set, Comparator, SortedSet, Queue, Deque
         Iterator<Employee> iterator = hashMap.values().iterator();
 //        while(iterator.hasNext()) {
 //            System.out.println(iterator.next());
