@@ -57,6 +57,8 @@ public class FeatureThree {
                 smallList.add(largeList.poll());
         }
 
+        // ^^^^ O(Log N) due to insertion in the Heap;
+
         public double findMedian() {
             if (smallList.size() == largeList.size()) {
                 // we have even number of elements, take the average of middle two elements
@@ -65,7 +67,7 @@ public class FeatureThree {
             // because max-heap will have one more element than the min-heap
             return smallList.peek();
         }
-
+        // ^^^ O(1) retrieval of the median from the top elements in the heap
         public static void main(String[] args) {
             // Driver code
 
