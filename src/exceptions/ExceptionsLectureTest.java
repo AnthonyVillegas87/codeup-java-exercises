@@ -1,8 +1,13 @@
 package exceptions;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class ExceptionsLectureTest {
 
     public static void main(String[] args) {
+
+
 
         ExceptionsLecture el = new ExceptionsLecture();
 
@@ -41,11 +46,11 @@ public class ExceptionsLectureTest {
 //            System.out.println(nfx.getMessage());
 //        }
 
-        try {
-            el.echoWord();
-        } catch (CusswordException cx) {
-            System.out.println("Oh no " + cx);
-        }
+//        try {
+//            el.echoWord();
+//        } catch (CusswordException cx) {
+//            System.out.println("Oh no " + cx);
+//        }
 
     }
 }
