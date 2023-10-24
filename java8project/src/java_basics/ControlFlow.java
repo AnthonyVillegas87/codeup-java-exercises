@@ -28,7 +28,7 @@ public class ControlFlow {
         int currentTemp = 60;
         String opinion;
 
-        if(currentTemp < favoriteTemp - 30) {
+        if(currentTemp <= favoriteTemp - 30) {
             opinion = "It's pretty damn cold!!";
         } else if(currentTemp < favoriteTemp - 20) {
             opinion = "It's kinda nippy";
@@ -37,5 +37,28 @@ public class ControlFlow {
         }
 
         System.out.println(opinion);
+
+
+
+
+
+        int month = 4;
+        String monthString;
+
+        switch (month) {
+            case 1 : monthString = "January";
+                break;
+            case 2 : monthString = "February";
+                break;
+            case 3 : monthString = "March";
+                break;
+            case 4 : monthString = "April";
+                break;
+            default : monthString = "Unknown month";
+        }
+
+        System.out.println(monthString);
+
+
     }
 }

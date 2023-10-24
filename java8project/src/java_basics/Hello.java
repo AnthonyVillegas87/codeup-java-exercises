@@ -1,6 +1,6 @@
 package java_basics;
-
-import java.sql.SQLOutput;
+import java.util.Arrays;
+import java.util.List;
 
 public class Hello {
 
@@ -19,8 +19,7 @@ public class Hello {
         System.out.println("Pt 8: Concurrency in Java");
         System.out.println("Pt 9: JDBC Connectivity");
         System.out.println("Pt 10: Lambda Expressions & Streams API");
-
-
+        
     }
 
 }
