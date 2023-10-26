@@ -1,18 +1,11 @@
 public class Earth {
 
     public static void main(String[] args) {
-        Human jason = new Human();
-        jason.age = 36;
-        jason.eyeColor = "blue";
-        jason.heightInInches = 72;
-        jason.name = "Jason Mac";
+        // Instance variable
+        Human jason = new Human("Jason", 36, 72, "Blue" );
         jason.speak();
         System.out.println(".........");
-        Human ray = new Human();
-        ray.name = "Ray";
-        ray.eyeColor = "brown";
-        ray.age = 33;
-        ray.heightInInches = 82;
+        Human ray = new Human("Ray", 33, 82, "brown");
         ray.speak();
     }
 
