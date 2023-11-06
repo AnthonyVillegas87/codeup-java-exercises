@@ -30,7 +30,7 @@ public class Animal {
 
     // Action methods
     public void eat() {
-        System.out.println(name + " is sleeping.");
+        System.out.println(name + " is eating.");
     }
 
     public void sleep() {
