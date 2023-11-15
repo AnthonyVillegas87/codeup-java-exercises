@@ -9,7 +9,7 @@ public class Email {
     private String department;
     private String email;
     private int defaultPasswordLength = 10;
-    private int mailboxCapacity;
+    private int mailboxCapacity = 500;
     private String alternateEmail;
 
     private String companySuffix = "encipher.com";
@@ -67,8 +67,29 @@ public class Email {
         return new String(password);
     }
     // Set the mailbox capacity
+    public void setMailboxCapacity(int capacity) {
+        this.mailboxCapacity = capacity;
+    }
 
     // Set an alternate email
-
+    public void setAlternateEmail(String alternateEmail) {
+        this.alternateEmail = alternateEmail;
+    }
     // Change the password
+    public void changePassword(String password) {
+        this.password = password;
+    }
+
+    public int getMailboxCapacity() {
+        return mailboxCapacity;
+    }
+
+    public String getAlternateEmail() {
+        return alternateEmail;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
 }
