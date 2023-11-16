@@ -1,3 +1,4 @@
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class Student {
@@ -32,7 +33,7 @@ public class Student {
     private int gradeYear;
     private String studentId;
     private String courses = null;
-    private int tuitionBalance = 0;
+    private double tuitionBalance = 0;
     private static int costOfCourse = 600;
     private static int id = 1000;
 
@@ -81,12 +82,27 @@ public class Student {
         } while (1 != 0);
 
         System.out.println("Enrolled in: " + courses);
-        System.out.println("Tuition Balance: " + tuitionBalance);
+
     }
 
     // View balance
+    public void viewBalance() {
+        System.out.println("Your balance is: $" + tuitionBalance);
+    }
+
 
     // Pay tuition
+    public void payTuition() {
+        viewBalance();
+        System.out.print("Enter your payment: $");
+        Scanner in = new Scanner(System.in);
+        double payment = in.nextDouble();
+        tuitionBalance = tuitionBalance - payment;
+        System.out.println("Thank you for your payment of $" + payment);
+        viewBalance();
+    }
+
+
 
     // Show status
 
