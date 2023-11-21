@@ -105,5 +105,11 @@ public class Student {
 
 
     // Show status
-
+    public String showInfo() {
+        return "Name: " + firstName + " " + lastName +
+                "\nGrade Level: " + gradeYear +
+                "\nStudentId: " + studentId +
+                "\nCourses Enrolled: " + courses +
+                "\nBalance: $" + tuitionBalance;
+    }
 }
