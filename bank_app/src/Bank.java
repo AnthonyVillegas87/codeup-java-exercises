@@ -48,6 +48,12 @@ public class Bank {
 
 
     public static void main(String[] args) {
+        Checking account1 = new Checking("Jason Cordova");
+
+        Savings savingsAcct1 = new Savings("Robe Lowe");
+
+
+        // Read a .csv file then create new accounts based on that data
 
     }
 }
