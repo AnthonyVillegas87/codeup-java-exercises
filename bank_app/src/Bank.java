@@ -48,9 +48,14 @@ public class Bank {
 
 
     public static void main(String[] args) {
-        Checking account1 = new Checking("Jason Cordova");
+        Checking account1 = new Checking("Jason Cordova", "123-44-7891", 500);
 
-        Savings savingsAcct1 = new Savings("Robe Lowe");
+        Savings savingsAcct1 = new Savings("Robe Lowe", "456-77-1234", 555);
+
+
+
+
+
 
 
         // Read a .csv file then create new accounts based on that data
